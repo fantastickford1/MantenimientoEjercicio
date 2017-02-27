@@ -3,6 +3,7 @@
 **<u>Git</u>**
 
 *No hacer commit de build.xml y la carpeta dist*
+*No hacer commit de hibernate.cfg.xml*
 
 *Hacer un branch si se modifica algo y no estas seguro de si afecta a los demas*
 
@@ -145,4 +146,3 @@ App structure:
 -hs_err_pid2300.log
 -README.md
 ```
-
