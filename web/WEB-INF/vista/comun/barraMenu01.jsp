@@ -1,6 +1,14 @@
 
     <!-- IS: Barra Menu Principal -->
-    <table class="barraMenu">
+    <header>
+      <img>
+      <div>
+      </div>
+    </header>
+    <nav>
+    </nav>
+
+    <div class="barraMenu">
         <tr>
             <td class="clsMenuBarItem"><a href="irInicio.do">Home</a></td>
             <td>|</td>
@@ -15,7 +23,7 @@
 			<td class="clsMenuBarItem"><a href="solicitarListarEstados.do">Estados</td>
             <td>|</td>
             <td class="clsMenuBarItem"><a href="solicitarListarRecomendaciones.do">Recomendaciones</td>
-            <td width="100%"></td>  
+            <td width="100%"></td>
         </tr>
-    </table>
-    <!-- FS: Barra Menu Principal -->	
+    </div>
+    <!-- FS: Barra Menu Principal -->

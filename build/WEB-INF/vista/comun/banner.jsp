@@ -1,11 +1,10 @@
 
 	<!-- IS: Encabezado de Pagina (Banner) -->
-	<table class="barraBanner">
-		<tr>	<td><img  src="images/logo-upch.png"></td>
-				<td align="center" width="100%">Administrador de Roles V2</td>
-		</tr>
+	<div class="mdl-layout__header-row">
+			<!-- <div>
+				<img  src="images/logo-upch.png">
+			</div> -->
+			<div align="center" width="100%" class="mdl-layout-title">Administrador de Roles GLH54 </div>
+	</div>
 
-	</table>
-	<!-- FS: Encabezado de Pagina (Banner) -->					
-
-					
+	<!-- FS: Encabezado de Pagina (Banner) -->
