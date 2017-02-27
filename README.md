@@ -2,9 +2,11 @@
 
 **<u>Git</u>**
 
-No hacer commit de build.xml y la carpeta dist
+*No hacer commit de build.xml y la carpeta dist*
 
-Essential requirements:
+*Hacer un branch si se modifica algo y no estas seguro de si afecta a los demas*
+
+**Essential requirements:
 
 - apache-tomcat
 - apache-ant
