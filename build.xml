@@ -105,8 +105,8 @@
                          commands via the "/manager" web application)
 -->
 
-    <property name="app.name"        value="DOMWWS"/>
-    <property name="app.version"     value="0.3"/>
+    <property name="app.name"        value="TeamManager"/>
+    <property name="app.version"     value="0.1"/>
     <property name="app.path"        value="/${app.name}"/>
 
     <property name="src.home"        value="${basedir}/src"/>
@@ -118,7 +118,7 @@
     <property name="dist.home"       value="${basedir}/dist"/>
     <property name="test.out.dir"    value="${basedir}/testout"/>
 
-    <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M15"/>
+    <property name="catalina.home"    value="/usr/share/tomcat8"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
