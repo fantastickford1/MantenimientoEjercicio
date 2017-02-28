@@ -5,9 +5,16 @@
 *No hacer commit de build.xml y la carpeta dist*
 *No hacer commit de hibernate.cfg.xml*
 
+```shell
+$ git add <Files>
+$ git commit -m "Mensaje"
+$ git pull
+$ git push
+```
+
 *Hacer un branch si se modifica algo y no estas seguro de si afecta a los demas*
 
-**Essential requirements:
+Essential requirements:
 
 - apache-tomcat
 - apache-ant
@@ -146,3 +153,9 @@ App structure:
 -hs_err_pid2300.log
 -README.md
 ```
+
+Las vistas se encuentran en la carpeta /web/WEB-INF/vista, editar las vistas correspondientes
+
+
+
+***Editar este README si tienen algo que documentar***
