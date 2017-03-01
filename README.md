@@ -5,11 +5,46 @@
 *No hacer commit de build.xml y la carpeta dist*
 *No hacer commit de hibernate.cfg.xml*
 
+Clonar
+
 ```shell
-$ git add <Files>
-$ git commit -m "Mensaje"
-$ git pull
-$ git push
+$~ git clone https://github.com/fantastickford1/MantenimientoEjercicio.git
+$~ cd MantenimientoEjercicio
+```
+
+Despues de hacer cambios
+
+```shell
+$~ git branch Issue#00<NAME>
+$~ git checkout Issue#00<NAME>
+$~ git add <Files>
+$~ git commit -m "Mensaje"
+$~ git push
+//Se revisa la branch
+//Branch aceptada
+$~ git checkout master
+//si alguien hizo cambios antes
+$~ git pull
+//si no
+$~ git merge Issue#00<NAME>
+$~ git branch -d Issue#00<NAME>
+$~ git push
+```
+
+Alguien hizo cambios
+
+```shell
+$~ git branch Issue#00<NAME>
+$~ git checkout Issue#00<NAME>
+$~ git add <Files>
+$~ git commit -m "Mensaje"
+$~ git push
+//Se revisa la branch
+//Branch aceptada
+$~ git checkout master
+$~ git merge Issue#00<NAME>
+$~ git branch -d Issue#00<NAME>
+$~ git push
 ```
 
 *Hacer un branch si se modifica algo y no estas seguro de si afecta a los demas*
