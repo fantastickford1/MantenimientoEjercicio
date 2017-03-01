@@ -1,0 +1,9 @@
+.show-drawer{
+  webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.mdl-header-edited{
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
