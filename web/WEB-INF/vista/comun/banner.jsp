@@ -1,9 +1,12 @@
 
 	<!-- IS: Encabezado de Pagina (Banner) -->
-	<table class="barraBanner">
-		<tr>	<td><img  src="images/logo-upch.png"></td>
-				<td align="center" width="100%">Administrador de Roles GLH54 </td>
-		</tr>
+	<div class="mdl-layout__header-row" id="appName">
+		<h3 class="mdl-layout-title">Team manager</h3>
+		<div class="mdl-layout-spacer"></div>
+		<button class="mdl-button mld-js-button mdl-button--icon" id="logout"><i class="material-icons">more_vert</i></button>
+		<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="logout">
+			<li class="mdl-menu__item">LogOut</li>
+		</ul>
+	</div>
 
-	</table>
 	<!-- FS: Encabezado de Pagina (Banner) -->
