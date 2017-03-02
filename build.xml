@@ -105,8 +105,8 @@
                          commands via the "/manager" web application)
 -->
 
-    <property name="app.name"        value="DOMWWS"/>
-    <property name="app.version"     value="0.3"/>
+    <property name="app.name"        value="TeamManager"/>
+    <property name="app.version"     value="1.1"/>
     <property name="app.path"        value="/${app.name}"/>
 
     <property name="src.home"        value="${basedir}/src"/>
@@ -141,12 +141,10 @@
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
     -->
-    <!--Carlos
     <property name="catalina.home"    value="/usr/share/tomcat8"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
-    -->
 
 
 
@@ -335,6 +333,19 @@ location="${catalina.home}/lib/catalina-ant.jar" />
 
     </target>
 
+    <target name="start" depends="clean,build,dist,remove"
+            description="Realiza todas las actividades necesarios para la instalacion">
+
+        <install
+          url="${manager.url}"
+          username="${manager.username}"
+          password="${manager.password}"
+          path="${app.path}"
+          war="file:${dist.home}/${app.name}v${app.version}.war"
+          />
+
+    </target>
+
 
 <!-- ==================== Prepare Target ============================= -->
 <!--
@@ -388,6 +399,7 @@ location="${catalina.home}/lib/catalina-ant.jar" />
         <!-- Compile Java classes as necessary -->
         <mkdir    dir="${build.home}/WEB-INF/classes"/>
         <javac srcdir="${src.home}"
+                encoding="ISO-8859-1"
                 destdir="${build.home}/WEB-INF/classes"
                 debug="${compile.debug}"
                 deprecation="${compile.deprecation}"

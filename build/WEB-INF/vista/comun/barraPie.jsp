@@ -1,23 +1,23 @@
-	<!-- Inicio Sección - Pie de Página -->
-	<!-- Inicio Seccion - Barra Menu Pie de Página -->
+	<!-- Inicio Secciï¿½n - Pie de Pï¿½gina -->
+	<!-- Inicio Seccion - Barra Menu Pie de Pï¿½gina -->
 	<table class="barraPie">
 		<tr>
 			<td align="center">
-				Acerca de | Ayuda | Hacer Recomendación | Reportar Problema|
+				Acerca de | Ayuda | Hacer Recomendaciï¿½n | Reportar Problema|
 
 			</td>
 		</tr>
 	</table>
-	<!-- Fin Seccion - Barra Menu Pie de Página -->	
-	
+	<!-- Fin Seccion - Barra Menu Pie de Pï¿½gina -->
+
 	<table class="barraDerechos">
 		<tr>
 			<td align="center">
-				Copyright © 2014. UPCHIAPAS    Todos los derechos reservados.
-				<br> David | Orlando | Mauricio | Walter Ulises | Walter | Luis Fernando
-				<br> 28 De Enero de 2016
+				Copyright ï¿½ 2014. UPCHIAPAS    Todos los derechos reservados.
+				<br> Diana | Hugo | Alexis | Itzel | Karlos | â™¥
+				<br> 01 De Febrero de 2016
 			</td>
-		</tr>						
+		</tr>
 	</table>
-	
-	<!-- Fin de Sección - Pie de página -->
+
+	<!-- Fin de Secciï¿½n - Pie de pï¿½gina -->

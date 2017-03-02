@@ -10,11 +10,11 @@ table.marco {
 }
 table.barraBanner {
 	border-collapse:collapse;
-	background-color:#009688;
+	background-color:#780096;
 	color: white;
-	font-family: Segoe Print;
+	font-family: Comic Sans MS;
 	height:45px;
-	width:100%;								
+	width:100%;
 }
 a{
 	text-decoration: none;
@@ -26,11 +26,11 @@ table.barraMenu {
 	border-top:1px solid red;
 	font-family:Cooper Black;
 	font-size:11px;
-	width:100%;				
+	width:100%;
 }
 table.barraHerramienta {
 	border-bottom:1px solid;
-	width:100%;				
+	width:100%;
 }
 td.barraIzquierda {
 	background-color:#87B1BA;
@@ -46,13 +46,13 @@ td.barraDerecha {
 table.barraIzquierdaX {
 	border-style:solid;
 	border:0px;
-	width:100%;				
+	width:100%;
 }
 table.barraDerecha {
 	background-color:#66FFCC;
 	border-style:solid;
 	border:0px;
-	width:100%;				
+	width:100%;
 }
 table.barraPie {
 	background-color:#FFFFFF;
@@ -60,11 +60,11 @@ table.barraPie {
 	font-family:Verdana, Arial;
         font-size:11px;
 	height:25px;
-	width:100%;				
+	width:100%;
 }
 table.barraDerechos {
 	background-color:#FFFFFF;
 	font-family:Verdana, Arial;
         font-size:9px;
-	width:100%;				
+	width:100%;
 }
