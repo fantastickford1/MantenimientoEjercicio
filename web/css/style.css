@@ -1,3 +1,7 @@
+body{
+  background-image: url("../images/IMG_386466.jpg");
+}
+
 .show-drawer{
   webkit-transform: translateX(0);
   transform: translateX(0);
@@ -6,4 +10,16 @@
 .mdl-header-edited{
   margin-left: 240px;
   width: calc(100% - 240px);
+}
+
+.main_grid{
+  margin-left: 240px;
+}
+
+.square-login{
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  margin-top: 19vh;
+  margin-left: 30vw;
 }
