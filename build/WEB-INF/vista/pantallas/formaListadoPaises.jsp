@@ -6,7 +6,7 @@
     color:#000000;
 	text-decoration:none;
   }
-  
+
   .HipervinculoAdmon:hover{
     color:#006666;
 	text-decoration:underline;
@@ -19,24 +19,24 @@
   }
 -->
 </script>
-    <br>
-    <font size='5'><fmt:message key="formaListadoPaises.titulo" /></font>
-    <table cellpadding="0" cellspacing="0" width="60%" border="0">
+
+<div class="mdl-grid mdl-color--white mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--12-col tarea-main-grid">
+    <div>
+      <span><fmt:message key="formaListadoPaises.titulo" /></span>
+    </div>
+    <div>
+      <html:errors />
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+      <thead>
         <tr>
-            <td colspan="4" style="padding-top:25px; padding-bottom:25px;">
-                <a href="solicitarRegistroPais.do" class="HipervinculoAdmon">Agregar nuevo pais...</a>
-            </td>
+          <th class="mdl-data-table__cell--non-numeric"><fmt:message key="formaListadoPaises.etiqueta.nombre" /></th>
+          <th><fmt:message key="formaListadoPaises.etiqueta.descripcion" /></th>
+          <th><fmt:message key="formaListadoPaises.etiqueta.administracion" /></th>
         </tr>
-        <tr>
-            <td colspan="4">
-               <html:errors />
-            </td>
-        </tr>
-        <tr bgcolor="#CCCCCC">
-         <td><b><fmt:message key="formaListadoEstados.etiqueta.nombre" /></b></td>
-         <td style="border-right-style:solid; border-left-style:solid; border-width:1px; border-color:#000000;"><b><fmt:message key="formaListadoEstados.etiqueta.descripcion" /></b></td>
-         <td colspan="2"><b><fmt:message key="formaListadoEstados.etiqueta.administracion" /></b></td>
-        </tr>
+      </thead>
+      <tbody>
         <c:forEach var="pais" items="${formaListadoPaises.paises}">
             <tr>
                 <td align="left" width="20%"><c:out value="${pais.nombre}"/></td>
@@ -56,7 +56,15 @@
                 </td>
             </tr>
         </c:forEach>
-        <tr>
-            <td colspan="4" align="right" style="padding-top:25px;"><b>Total:</b> ${formaListadoPaises.contador}</td>
-        </tr>
+      </tbody>
     </table>
+    <div>
+      <spam>Total:</spam> ${formaListadoPaises.contador}</td>
+    </div>
+    <div>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        <a href="solicitarRegistroPais.do" class="HipervinculoAdmon">Agregar nuevo pais...</a>
+      </button>
+    </div>
+  </div>
+</div>

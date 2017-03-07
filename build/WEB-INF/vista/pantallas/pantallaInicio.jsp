@@ -25,8 +25,8 @@
 						<h3>Welcome </h3>
 					</div>
 				</main>
-				<footer>
+				<!--footer>
 					<c:import url="/WEB-INF/vista/comun/barraPie.jsp" />
-				</footer>
+				</footer-->
     </body>
 </html>
