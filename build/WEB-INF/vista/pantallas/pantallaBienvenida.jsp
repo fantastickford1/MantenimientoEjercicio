@@ -20,12 +20,12 @@
 					<div class="mdl-layout__drawer show-drawer mdl-color--blue-grey-800" id="nav_bar">
 						<c:import url="/WEB-INF/vista/comun/barraMenu01.jsp" />
 					</div>
-				<div height="490px">
-					<div align="center" valign="center" width="100%">
-						<h3>Pantalla de Bienvenida</h3>
-						<a href="solicitarListarRoles.do">Administraci�n de roles</a>
-					</di>
-				</div>
+					<main class="mdl-layout__content main_grid">
+						<div class="mdl-grid" align="center" valign="center" width="100%">
+							<h3>Pantalla de Bienvenida</h3>
+							<a href="solicitarListarRoles.do">Administraci�n de roles</a>
+						</div>
+					</main>
 				<footer>
 					<c:import url="/WEB-INF/vista/comun/barraPie.jsp" />
 				</footer>

@@ -20,13 +20,13 @@
 				<div class="mdl-layout__drawer show-drawer mdl-color--blue-grey-800" id="nav_bar">
 					<c:import url="/WEB-INF/vista/comun/barraMenu01.jsp" />
 				</div>
-				<div height="590px">
-					<div align="center" valign="center" width="100%">
+				<main class="mdl-layout__content main_grid">
+					<div class="mdl-grid" align="center" valign="center" width="100%">
 						<h3>Welcome </h3>
-					</di>
-				</div>
-				<footer>
+					</div>
+				</main>
+				<!--footer>
 					<c:import url="/WEB-INF/vista/comun/barraPie.jsp" />
-				</footer>
+				</footer-->
     </body>
 </html>
