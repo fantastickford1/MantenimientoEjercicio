@@ -117,12 +117,12 @@
     <property name="lib.home"        value="${basedir}/build/WEB-INF/lib"/>
     <property name="dist.home"       value="${basedir}/dist"/>
     <property name="test.out.dir"    value="${basedir}/testout"/>
-
+<!--
     <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
-
+-->
     <!--Diana
     <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
@@ -141,12 +141,11 @@
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
     -->
-    <!--
+
     <property name="catalina.home"    value="/usr/share/tomcat8"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="root"/>
-  -->
 
 
 

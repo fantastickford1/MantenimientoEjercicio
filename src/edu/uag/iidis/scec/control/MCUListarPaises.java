@@ -63,7 +63,7 @@ public final class MCUListarPaises
         } else {
             log.error("Ocurrió un error de infraestructura");
             errores.add(ActionMessages.GLOBAL_MESSAGE,
-                        new ActionMessage("errors.infraestructura"));                
+                        new ActionMessage("errors.infraestructura"));
             saveErrors(request, errores);
             return ( mapping.findForward("fracaso") );
         }
