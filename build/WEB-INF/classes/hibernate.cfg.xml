@@ -18,14 +18,14 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/login?autoReconnect=true</property>
-    <!--
+        <!--
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
--->
+        -->
 
         <!--Alex
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.password">ADMINADMIN</property>
         -->
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">SithLordKing16</property>
@@ -54,6 +54,7 @@
         -->
 
         <!-- Archivos ORM -->
+        <mapping resource="edu/uag/iidis/scec/modelo/Tarea.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Usuario.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Rol.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Ciudad.hbm.xml"/>

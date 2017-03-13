@@ -5,17 +5,17 @@ import java.util.Collection;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import edu.uag.iidis.scec.modelo.Tareas;
+import edu.uag.iidis.scec.modelo.Tarea;
 import edu.uag.iidis.scec.excepciones.*;
-import edu.uag.iidis.scec.persistencia.TareasDAO;
+import edu.uag.iidis.scec.persistencia.TareaDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
 
 public class ManejadorTareas {
     private Log log = LogFactory.getLog(ManejadorTareas.class);
-    private TareasDAO dao;
+    private TareaDAO dao;
 
-    public ManejadorPaises() {
-        dao = new TareasDAO();
+    public ManejadorTareas() {
+        dao = new TareaDAO();
     }
 
 
@@ -45,7 +45,7 @@ public class ManejadorTareas {
         }
         try {
             HibernateUtil.beginTransaction();
-            Tareas tarea = dao.buscarPorId(id, true);
+            Tarea tarea = dao.buscarPorId(id, true);
             if (tarea != null) {
               dao.hazTransitorio(tarea);
             }
@@ -61,7 +61,7 @@ public class ManejadorTareas {
 
     }
 
-    public int crearTarea(Tareas tarea) {
+    public int crearTarea(Tarea tarea) {
 
         int resultado;
 

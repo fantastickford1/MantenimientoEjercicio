@@ -57,7 +57,7 @@ public final class MCUListarTareas
                     new ActionMessage("errors.registroVacio"));
                 saveErrors(request, errores);
             } else {
-                forma.setPaises( resultado );
+                forma.setTareas( resultado );
             }
             return (mapping.findForward("exito"));
         } else {
