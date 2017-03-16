@@ -105,7 +105,7 @@
                          commands via the "/manager" web application)
 -->
 
-    <property name="app.name"        value="Test"/>
+    <property name="app.name"        value="TeamManager"/>
     <property name="app.version"     value="1.1"/>
     <property name="app.path"        value="/${app.name}"/>
 
@@ -135,11 +135,13 @@
     <property name="manager.username" value="lola"/>
     <property name="manager.password" value="lola"/>
     -->
-
+    <!--ALex
     <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="alex"/>
     <property name="manager.password" value="root"/>
+
+  -->
 
     <!--Carlos
     <property name="catalina.home"    value="/usr/share/tomcat8"/>
