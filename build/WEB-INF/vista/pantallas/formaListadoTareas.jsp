@@ -31,40 +31,22 @@ return confirm("¿Desea eliminar el estado '" + strPaisName + "'?")
 <table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
-      <th class="mdl-data-table__cell--non-numeric"><fmt:message key="formaListadoPaises.etiqueta.nombre" /></th>
-      <th><fmt:message key="formaListadoPaises.etiqueta.descripcion" /></th>
-      <th><fmt:message key="formaListadoPaises.etiqueta.administracion" /></th>
+      <th class="mdl-data-table__cell--non-numeric"><fmt:message key="formaListadoTareas.etiqueta.nombre" /></th>
+      <th><fmt:message key="formaListadoTareas.etiqueta.descripcion" /></th>
+      <th><fmt:message key="formaListadoTareas.etiqueta.administracion" /></th>
     </tr>
   </thead>
   <tbody>
-    <c:forEach var="pais" items="${formaListadoPaises.paises}">
+    <c:forEach var="tarea" items="${formaListadoTareas.tareas}">
         <tr>
-            <td align="left" width="20%"><c:out value="${pais.nombre}"/></td>
-            <td align="left" width="60%"><c:out value="${pais.descripcion}"/></td>
-            <td align="left" width="20%">
-                <a href='solicitarModificarPais.do?id=<c:out value="${pais.id}"/>'
-         class="HipervinculoAdmon">
-                    <fmt:message key="formaListadoEstados.etiqueta.modificar"/>
-                </a>
-            </td>
-            <td>
-                <a href='procesarEliminarPais.do?id=<c:out value="${pais.id}"/>'
-         onClick="javascript: return EliminarPais('<c:out value="${pais.nombre}"/>')"
-         class="HipervinculoAdmon">
-                    <fmt:message key="formaListadoPaises.etiqueta.eliminar" />
-                </a>
-            </td>
+            <td align="left" width="20%"><c:out value="${tarea.nombre}"/></td>
+            <td align="left" width="60%"><c:out value="${tarea.descripcion}"/></td>
         </tr>
     </c:forEach>
   </tbody>
 </table>
 <div>
-  <spam>Total:</spam> ${formaListadoPaises.contador}</td>
-</div>
-<div>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-    <a href="solicitarRegistroPais.do" class="HipervinculoAdmon">Agregar nuevo pais...</a>
-  </button>
+  <spam>Total:</spam> ${formaListadoTareas.contador}</td>
 </div>
 </div>
 </div>
