@@ -20,7 +20,7 @@ import org.apache.struts.actions.MappingDispatchAction;
 
 
 
-public final class MCURegistrarUsuario 
+public final class MCURegistrarUsuario
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
@@ -36,9 +36,9 @@ public final class MCURegistrarUsuario
         if (log.isDebugEnabled()) {
             log.debug(">solicitarRegistro");
         }
-		
-		
-		/* incluir ciudades      */
+
+
+		/* incluir ciudades
 		FormaNuevaPersona forma = (FormaNuevaPersona)form;
 		ManejadorCiudades mr = new ManejadorCiudades();
         Collection resultado = mr.listarCiudades();
@@ -54,15 +54,15 @@ public final class MCURegistrarUsuario
                 forma.setCiudades ( resultado );
             }
         } else {
-            log.error("Ocurrió un error de infraestructura");
+            log.error("Ocurriï¿½ un error de infraestructura");
             errores.add(ActionMessages.GLOBAL_MESSAGE,
-                        new ActionMessage("errors.infraestructura"));                
+                        new ActionMessage("errors.infraestructura"));
             saveErrors(request, errores);
-        }		
-		
-		
-	/* incluir ciudades      */	
-		
+        }
+
+
+ incluir ciudades      */
+
 
         return (mapping.findForward("exito"));
     }
@@ -80,15 +80,15 @@ public final class MCURegistrarUsuario
             log.debug(">procesarRegistro");
         }
 
-        // Verifica si la acción fue cancelada por el usuario
+        // Verifica si la acciï¿½n fue cancelada por el usuario
         if (isCancelled(request)) {
             if (log.isDebugEnabled()) {
-                log.debug("<La acción fue cancelada");
+                log.debug("<La acciï¿½n fue cancelada");
             }
             return (mapping.findForward("cancelar"));
         }
 
-        
+
         // Se obtienen los datos para procesar el registro
         FormaNuevaPersona forma = (FormaNuevaPersona)form;
 
@@ -109,31 +109,30 @@ public final class MCURegistrarUsuario
 
         ActionMessages errores = new ActionMessages();
         switch (resultado) {
-            case 0:   
+            case 0:
                 return (mapping.findForward("exito"));
 
             case 1:
                 errores.add(ActionMessages.GLOBAL_MESSAGE,
                             new ActionMessage("errors.nombreUsuarioYaExiste",
-                                               forma.getNombreUsuario()));                
+                                               forma.getNombreUsuario()));
                 saveErrors(request, errores);
                 return (mapping.getInputForward());
 
             case 3:
-                log.error("Ocurrió un error de infraestructura");
+                log.error("Ocurriï¿½ un error de infraestructura");
                 errores.add(ActionMessages.GLOBAL_MESSAGE,
-                            new ActionMessage("errors.infraestructura"));                
+                            new ActionMessage("errors.infraestructura"));
                 saveErrors(request, errores);
                 return (mapping.getInputForward());
 
             default:
-                log.warn("ManejadorUsuario.crearUsuario regresó reultado inesperado");
+                log.warn("ManejadorUsuario.crearUsuario regresï¿½ reultado inesperado");
                 errores.add(ActionMessages.GLOBAL_MESSAGE,
-                            new ActionMessage("errors.infraestructura"));                
+                            new ActionMessage("errors.infraestructura"));
                 saveErrors(request, errores);
                 return (mapping.getInputForward());
         }
     }
 
 }
-

@@ -19,7 +19,7 @@ import org.apache.struts.actions.MappingDispatchAction;
 
 
 
-public final class MCUEliminarRol 
+public final class MCUEliminarRol
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
@@ -35,7 +35,7 @@ public final class MCUEliminarRol
         if (log.isDebugEnabled()) {
             log.debug(">procesarEliminarRol");
         }
-      
+
         FormaEliminarRol forma = (FormaEliminarRol)form;
         ManejadorRoles mr = new ManejadorRoles();
         mr.eliminarRol(forma.getId());

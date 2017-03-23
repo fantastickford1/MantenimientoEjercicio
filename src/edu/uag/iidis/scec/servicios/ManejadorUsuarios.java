@@ -19,7 +19,7 @@ public class ManejadorUsuarios {
     }
 
 
-    public Usuario obtenerUsuario(String nombreUsuario) 
+    public Usuario obtenerUsuario(String nombreUsuario)
             throws ExcepcionServicio {
 
         if (log.isDebugEnabled()) {
@@ -44,6 +44,25 @@ public class ManejadorUsuarios {
         return dao.buscarTodos();
     }
 
+    public Collection listarUsuarios() {
+        Collection resultado;
+
+        if (log.isDebugEnabled()) {
+            log.debug(">guardarUsuario(usuario)");
+        }
+
+        try {
+            HibernateUtil.beginTransaction();
+            resultado = dao.buscarTodos();
+            HibernateUtil.commitTransaction();
+            return resultado;
+        } catch (ExcepcionInfraestructura e) {
+            HibernateUtil.rollbackTransaction();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 
     public int crearUsuario(Usuario usuario) {
 
@@ -54,11 +73,11 @@ public class ManejadorUsuarios {
         }
 
         try {
-            HibernateUtil.beginTransaction();           
-            
+            HibernateUtil.beginTransaction();
+
             if (dao.existeUsuario(usuario.getCredencial()
                                          .getNombreUsuario())) {
-               resultado = 1; // Excepción. El nombre de usuario ya existe
+               resultado = 1; // Excepciï¿½n. El nombre de usuario ya existe
             } else {
 
                dao.hazPersistente(usuario);
@@ -74,7 +93,7 @@ public class ManejadorUsuarios {
             if (log.isWarnEnabled()) {
                 log.warn("<ExcepcionInfraestructura");
             }
-            resultado = 2;    // Excepción. Falla en la infraestructura
+            resultado = 2;    // Excepciï¿½n. Falla en la infraestructura
         } finally {
             HibernateUtil.closeSession();
         }
@@ -83,8 +102,7 @@ public class ManejadorUsuarios {
 
 
 /*
-    public void eliminarUsuario(String nombreUsuario) 
-            throws ExcepcionServicio {
+    public void eliminarUsuario(String nombreUsuario) throws ExcepcionServicio {
 
         if (log.isDebugEnabled()) {
             log.debug(">eliminarUsuario(" + nombreUsuario + ")");
@@ -100,5 +118,5 @@ public class ManejadorUsuarios {
         }
     }
 */
-    
+
 }

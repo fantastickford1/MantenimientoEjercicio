@@ -23,6 +23,14 @@
         <form-bean name="formaNuevaPersona"
                    type="edu.uag.iidis.scec.vista.FormaNuevaPersona">
         </form-bean>
+        <form-bean name="formaEliminarUsuario"
+                   type="edu.uag.iidis.scec.vista.FormaEliminarUsuario">
+        </form-bean>
+
+        <form-bean name="formaListarUsuario"
+                   type="edu.uag.iidis.scec.vista.FormaListarUsuario">
+        </form-bean>
+
         <form-bean name="formaNuevoRol"
                    type="edu.uag.iidis.scec.vista.FormaNuevoRol">
         </form-bean>
@@ -108,7 +116,7 @@
         <action path="/irAyuda"
                 forward="/WEB-INF/vista/pantallas/pantallaAyuda.jsp" />
 
-        <!-- dist -->
+        <!-- dist alex -->
         <action path="/solicitarRegistro"
                 type="edu.uag.iidis.scec.control.MCURegistrarUsuario"
                 parameter="solicitarRegistro"
@@ -117,7 +125,30 @@
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaPersona.jsp"/>
         </action>
-          <!-- dist -->
+
+        <action path="/solicitarEliminarUsuario"
+                type="edu.uag.iidis.scec.control.MCUEliminarUsuario"
+                parameter="solicitarEliminarUsuario"
+                name="formaEliminarUsuario"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEliminarUsuario.jsp"/>
+        </action>
+
+
+
+        <action path="/solicitarListarUsuarios"
+                type="edu.uag.iidis.scec.control.MCUListarUsuarios"
+                parameter="solicitarListarUsuarios"
+                name="formaListarUsuario"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListarUsuario.jsp"/>
+            <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
+
+
+          <!-- dist  alex -->
         <action path="/solicitarListarRoles"
                 type="edu.uag.iidis.scec.control.MCUListarRoles"
                 parameter="solicitarListarRoles"
@@ -140,6 +171,17 @@
             <forward name="exito" path="/WEB-INF/vista/pantallas/pantallaBienvenida.jsp"/>
             <forward name="volver" path="/solicitarRegistro.do" redirect="true"/>
        </action>
+
+       <action path="/procesarEliminarUsuario"
+                   type="edu.uag.iidis.scec.control.MCUEliminarUsuario"
+                   parameter="procesarEliminarUsuario"
+                   name="formaEliminarUsuario"
+                   scope="request"
+                   validate="false">
+               <forward name="exito" path="/solicitarEliminarUsuario.do" redirect="true"/>
+           </action>
+
+
 <!-- no mames no mames no mames-->
 
 
@@ -162,6 +204,7 @@
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoTareas.jsp"/>
         </action>
+
 		<action path="/solicitarListarEstados"
                 type="edu.uag.iidis.scec.control.MCUListarEstados"
                 parameter="solicitarListarEstados"
@@ -217,6 +260,10 @@
                 validate="false">
             <forward name="exito" path="/solicitarListarRoles.do" redirect="true"/>
         </action>
+
+
+
+
         <action path="/procesarEliminarEstado"
                 type="edu.uag.iidis.scec.control.MCUEliminarEstado"
                 parameter="procesarEliminarEstado"
