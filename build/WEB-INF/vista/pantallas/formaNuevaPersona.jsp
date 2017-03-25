@@ -18,10 +18,10 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.prefijo" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="prefijo" 
-                           size="12" 
-                           maxlength="12" 
+                    <input type="text"
+                           name="prefijo"
+                           size="12"
+                           maxlength="12"
                            value="${formaNuevaPersona.prefijo}" />
                 </td>
             </tr>
@@ -30,10 +30,10 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.nombre" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="nombre" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="nombre"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.nombre}" />
                 </td>
             </tr>
@@ -42,10 +42,10 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.apellidoPaterno" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="apellidoPaterno" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="apellidoPaterno"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.apellidoPaterno}" />
                 </td>
             </tr>
@@ -54,39 +54,24 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.apellidoMaterno" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="apellidoMaterno" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="apellidoMaterno"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.apellidoMaterno}" />
                 </td>
             </tr>
-      <!---    /cidades --->      
-            <tr>
-                <td align="right">
-                    <fmt:message key="formaNuevaPersona.etiqueta.ciudades" />
-                </td>
-                <td align="left">
-       				<select name="ciudad">
-                        <c:forEach var="rol" items="${formaNuevaPersona.ciudades}">
-    		            <option value="${rol.nombre}">"${rol.descripcion}"</option>
-            			</c:forEach>
-                     </select>
-                </td>
-            </tr>
-            
-            
-            
-            
+      <!---    /cidades --->
+
             <tr>
                 <td align="right">
                     <fmt:message key="formaNuevaPersona.etiqueta.nombreUsuario" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="nombreUsuario" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="nombreUsuario"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.nombreUsuario}" />
                 </td>
             </tr>
@@ -95,10 +80,10 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.claveAcceso" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="claveAcceso" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="claveAcceso"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.claveAcceso}" />
                 </td>
             </tr>
@@ -107,33 +92,34 @@
                     <fmt:message key="formaNuevaPersona.etiqueta.claveAccesoConfirmacion" />
                 </td>
                 <td align="left">
-                    <input type="text" 
-                           name="claveAccesoConfirmacion" 
-                           size="50" 
-                           maxlength="100" 
+                    <input type="text"
+                           name="claveAccesoConfirmacion"
+                           size="50"
+                           maxlength="100"
                            value="${formaNuevaPersona.claveAccesoConfirmacion}" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" 
+                  <input type="submit"
+                         name="submit"
+                         value="Modificar"
+                         onclick="Location.href='solicitarEliminarUsuario.do'"/>
+                    <input type="submit"
                            name="submit"
                            value="Agregar y terminar"/>
-                    <input type="submit" 
+                    <input type="submit"
                            name="submit"
                            value="Agregar y volver"
                            onclick="forma.action='procesarRegistro.do?volver=si'"/>
                     <input type="button"
                            value="Reset"
                            onclick="location.href='solicitarRegistro.do'" />
-                    <input type="submit" 
-                           name="org.apache.struts.taglib.html.CANCEL" 
-                           value="Cancelar" 
-                           onclick="bCancel=true;">    
+                    <input type="submit"
+                           name="org.apache.struts.taglib.html.CANCEL"
+                           value="Cancelar"
+                           onclick="bCancel=true;">
                 </td>
             </tr>
         </table>
     </form>
-
-
-

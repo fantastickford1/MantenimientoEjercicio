@@ -20,13 +20,13 @@ import org.apache.struts.actions.MappingDispatchAction;
 
 
 
-public final class MCUListarPaises
+public final class MCUListarUsuarios
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
 
-    public ActionForward solicitarListarPaises(
+    public ActionForward solicitarListarUsuarios(
                 ActionMapping mapping,
                 ActionForm form,
                 HttpServletRequest request,
@@ -34,21 +34,23 @@ public final class MCUListarPaises
             throws Exception {
 
         if (log.isDebugEnabled()) {
-            log.debug(">solicitarListarPaises");
+            log.debug(">solicitarListarUsuarios");
         }
 
-        // Verifica si la acción fue cancelada por el usuario
+        // Verifica si la acci�n fue cancelada por el usuario
         if (isCancelled(request)) {
             if (log.isDebugEnabled()) {
-                log.debug("<La acción fue cancelada");
+                log.debug("<La acci�n fue cancelada");
             }
             return (mapping.findForward("cancelar"));
         }
 
-        FormaListadoPaises forma = (FormaListadoPaises)form;
 
-        ManejadorPaises mr = new ManejadorPaises();
-        Collection resultado = mr.listarPaises();
+
+        FormaListarUsuario forma = (FormaListarUsuario)form;
+
+        ManejadorUsuarios mr = new ManejadorUsuarios();
+        Collection resultado = mr.listarUsuarios();
 
         ActionMessages errores = new ActionMessages();
         if (resultado != null) {
@@ -57,11 +59,11 @@ public final class MCUListarPaises
                     new ActionMessage("errors.registroVacio"));
                 saveErrors(request, errores);
             } else {
-                forma.setPaises( resultado );
+                forma.setUser(resultado);
             }
             return (mapping.findForward("exito"));
         } else {
-            log.error("Ocurrió un error de infraestructura");
+            log.error("Ocurri� un error de infraestructura");
             errores.add(ActionMessages.GLOBAL_MESSAGE,
                         new ActionMessage("errors.infraestructura"));
             saveErrors(request, errores);

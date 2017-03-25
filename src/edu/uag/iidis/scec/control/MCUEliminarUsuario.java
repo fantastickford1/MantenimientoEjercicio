@@ -19,26 +19,29 @@ import org.apache.struts.actions.MappingDispatchAction;
 
 
 
-public final class MCUEliminarRol
+public final class MCUEliminarUsuario
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
 
-    public ActionForward procesarEliminarRol(
+    public ActionForward procesarEliminarUsuario(
                 ActionMapping mapping,
                 ActionForm form,
                 HttpServletRequest request,
                 HttpServletResponse response)
             throws Exception {
 
-        if (log.isDebugEnabled()) {
-            log.debug(">procesarEliminarRol");
-        }
+              if (log.isDebugEnabled()) {
+                  log.debug(">procesarEliminarUsuario");
+              }
+/*
+        FormaEliminarUsuario forma = (FormaEliminarUsuario)form;
+        ManejadorUsuarios me = new ManejadorUsuarios();
 
-        FormaEliminarRol forma = (FormaEliminarRol)form;
-        ManejadorRoles mr = new ManejadorRoles();
-        mr.eliminarRol(forma.getId());
+        me.eliminarUsuario(forma.getUsername());
+        return (mapping.findForward("exito"));
+        */
         return (mapping.findForward("exito"));
     }
 }

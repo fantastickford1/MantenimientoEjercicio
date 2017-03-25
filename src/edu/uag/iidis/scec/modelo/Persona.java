@@ -5,17 +5,17 @@ import java.util.List;
 
 
 /**
- * Esta clase es usada para representar a una persona. 
+ * Esta clase es usada para representar a una persona.
  *
  * <p>
- * <a href="Persona.java.html"><i>Ver código fuente</i></a>
+ * <a href="Persona.java.html"><i>Ver cï¿½digo fuente</i></a>
  * </p>
  *
  * @author <a href="mailto:vramos@uag.mx">Victor Ramos</a>
  * @version 1.0
  */
 public class Persona {
-    
+
     protected Long id;
     protected NombrePersona nombre;
 

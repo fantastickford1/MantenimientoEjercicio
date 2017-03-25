@@ -11,7 +11,7 @@
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">home</i>
         <spam class="mdl-color-text--blue-grey-50">Home</spam>
       </a>
-      <a class="mdl-navigation__link" href="#">
+      <a class="mdl-navigation__link" href="solicitarListarUsuarios.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">people</i>
         <spam class="mdl-color-text--blue-grey-50">Reg Integrantes</spam>
       </a>
@@ -23,7 +23,7 @@
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">face</i>
         <spam class="mdl-color-text--blue-grey-50">Perfil</spam>
       </a>
-      <a class="mdl-navigation__link" href="#">
+      <a class="mdl-navigation__link" href="solicitarListarTareas.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">list</i>
         <spam class="mdl-color-text--blue-grey-50">Tareas</spam>
       </a>
@@ -31,7 +31,7 @@
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">question_answer</i>
         <spam class="mdl-color-text--blue-grey-50">Sugerencias</spam>
       </a>
-      <a class="mdl-navigation__link" href="irAyuda.do">
+      <a class="mdl-navigation__link" href="#">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">help</i>
         <spam class="mdl-color-text--blue-grey-50">Help</spam>
       </a>

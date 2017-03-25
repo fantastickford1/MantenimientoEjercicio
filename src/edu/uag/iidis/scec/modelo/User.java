@@ -3,9 +3,9 @@ package edu.uag.iidis.scec.modelo;
 import java.io.Serializable;
 import java.util.*;
 
-public class User extends ClaseBase 
+public class User extends ClaseBase
         implements Serializable {
-			
+
 	private String username;
 	private String userid;
 
@@ -20,8 +20,8 @@ public class User extends ClaseBase
 		this.username = username;
 		this.userid = userid;
 	}
-	
- 
+
+
 	public String getUsername() {
 		return this.username;
 	}

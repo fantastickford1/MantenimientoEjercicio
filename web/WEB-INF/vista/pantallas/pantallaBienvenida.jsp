@@ -17,7 +17,7 @@
 					<header class="mdl-layout__header mdl-header-edited" id="banner">
 						<c:import url="/WEB-INF/vista/comun/banner.jsp" />
 					</header>
-					<div class="mdl-layout__drawer show-drawer mdl-color--blue-grey-800" id="nav_bar">
+					<div class="mdl-layout__drawer show-drawer mdl-color--blue-grey-800" id="nav_bar"> 
 						<c:import url="/WEB-INF/vista/comun/barraMenu01.jsp" />
 					</div>
 					<main class="mdl-layout__content main_grid">
@@ -30,4 +30,4 @@
 					<c:import url="/WEB-INF/vista/comun/barraPie.jsp" />
 				</footer>
     </body>
-</html>
+</html> 	 

@@ -1,4 +1,4 @@
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
     <class name="edu.uag.iidis.scec.modelo.Usuario"
@@ -13,7 +13,7 @@
         </id>
 
         <component name="nombre">
-            <property name="prefijo" column="nombrePrefijo" />            
+            <property name="prefijo" column="nombrePrefijo" />
             <property name="nombre" column="nombreNombre" />
             <property name="apellidoPaterno" column="nombreApellidoPaterno" />
             <property name="apellidoMaterno" column="nombreApellidoMaterno" />
@@ -22,10 +22,10 @@
         </component>
 
         <component name="credencial">
-            <property name="nombreUsuario" 
+            <property name="nombreUsuario"
                     not-null="true"
                     unique="true" />
-            <property name="claveAcceso" 
+            <property name="claveAcceso"
                     not-null="true" />
         </component>
 

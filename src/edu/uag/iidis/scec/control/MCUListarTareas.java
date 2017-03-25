@@ -20,13 +20,13 @@ import org.apache.struts.actions.MappingDispatchAction;
 
 
 
-public final class MCUListarPaises
+public final class MCUListarTareas
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
 
-    public ActionForward solicitarListarPaises(
+    public ActionForward solicitarListarTareas(
                 ActionMapping mapping,
                 ActionForm form,
                 HttpServletRequest request,
@@ -34,7 +34,7 @@ public final class MCUListarPaises
             throws Exception {
 
         if (log.isDebugEnabled()) {
-            log.debug(">solicitarListarPaises");
+            log.debug(">solicitarListarTareas");
         }
 
         // Verifica si la acción fue cancelada por el usuario
@@ -45,10 +45,10 @@ public final class MCUListarPaises
             return (mapping.findForward("cancelar"));
         }
 
-        FormaListadoPaises forma = (FormaListadoPaises)form;
+        FormaListadoTareas forma = (FormaListadoTareas)form;
 
-        ManejadorPaises mr = new ManejadorPaises();
-        Collection resultado = mr.listarPaises();
+        ManejadorTareas mr = new ManejadorTareas();
+        Collection resultado = mr.listarTareas();
 
         ActionMessages errores = new ActionMessages();
         if (resultado != null) {
@@ -57,7 +57,7 @@ public final class MCUListarPaises
                     new ActionMessage("errors.registroVacio"));
                 saveErrors(request, errores);
             } else {
-                forma.setPaises( resultado );
+                forma.setTareas( resultado );
             }
             return (mapping.findForward("exito"));
         } else {

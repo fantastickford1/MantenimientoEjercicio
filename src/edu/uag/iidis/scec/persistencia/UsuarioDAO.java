@@ -37,8 +37,8 @@ public class UsuarioDAO {
         try {
             if (bloquear) {
                 usuario = (Usuario)HibernateUtil.getSession()
-                                                .load(Usuario.class, 
-                                                      idUsuario, 
+                                                .load(Usuario.class,
+                                                      idUsuario,
                                                       LockMode.UPGRADE);
             } else {
                 usuario = (Usuario)HibernateUtil.getSession()
@@ -104,6 +104,8 @@ public class UsuarioDAO {
             usuarios = HibernateUtil.getSession()
                                     .createCriteria(Usuario.class)
                                     .list();
+
+                    log.debug(">buscarTodos() ---- list   " + usuarios.size());
         } catch (HibernateException ex) {
             if (log.isWarnEnabled()) {
                 log.warn("<HibernateException");
@@ -111,7 +113,7 @@ public class UsuarioDAO {
             throw new ExcepcionInfraestructura(ex);
         }
         return usuarios;
-    }
+}
 
 
 
@@ -151,7 +153,7 @@ public class UsuarioDAO {
 //
 //            int resultado =
 //            ((Integer) HibernateUtil.getSession()
-//                           .find(consultaCuentaUsuarios, 
+//                           .find(consultaCuentaUsuarios,
 //                                 nombreUsuario,
 //                                 StringType.INSTANCE)
 //                           .iterator()
@@ -167,7 +169,7 @@ public class UsuarioDAO {
             if (resultado == 0) {
                return false;
             }
-            
+
             return true;
 
         } catch (HibernateException ex) {
