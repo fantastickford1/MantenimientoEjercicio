@@ -61,6 +61,13 @@
 		<form-bean name="formaListadoLugares"
                    type="edu.uag.iidis.scec.vista.FormaListadoLugares">
         </form-bean>
+
+
+
+    <form-bean name="formaListadoSugerencias"
+                  type="edu.uag.iidis.scec.vista.FormaListadoSugerencias">
+    </form-bean>
+
     </form-beans>
 
 	<form-beans>
@@ -225,6 +232,19 @@
             <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
 
+<<<<<<< HEAD
+  <!-- Definici�n de Sugerencias -->
+  <action path="/solicitarListarSugerencias"
+              type="edu.uag.iidis.scec.control.MCUListarSugerencias"
+              parameter="solicitarListarSugerencias"
+              name="formaListadoSugerencias"
+              scope="request"
+              validate="false">
+          <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoSugerencias.jsp"/>
+          <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+      </action>
+=======
+>>>>>>> b7defdf9449be6a344466299adf90e595680cabf
 
         <action path="/solicitarRegistroPais"
                 type="edu.uag.iidis.scec.control.MCURegistrarPais"
