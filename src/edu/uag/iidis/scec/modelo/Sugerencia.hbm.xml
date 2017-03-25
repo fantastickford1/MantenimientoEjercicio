@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.uag.iidis.scec.modelo.Sugerencia"
+           table="sugerencias">
+
+        <id name="id"
+            column="id"
+            type="java.lang.Long">
+        </id>
+
+        <property name="nombre"
+			      column="nombre"
+            type="java.lang.String"
+        />
+
+        <property name="sugerencia"
+			      column="sugerencia"
+            type="java.lang.String" />
+
+    </class>
+
+</hibernate-mapping>

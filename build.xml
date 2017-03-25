@@ -118,17 +118,17 @@
     <property name="dist.home"       value="${basedir}/dist"/>
     <property name="test.out.dir"    value="${basedir}/testout"/>
 
-    <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
+    <!--property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
-    <property name="manager.password" value="root"/>
+    <property name="manager.password" value="root"/__> -->
 
-    <!--Diana
+    <!-- Diana -->
     <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>
     <property name="manager.username" value="root"/>
     <property name="manager.password" value="1234"/>
-    -->
+
     <!--Itzel
     <property name="catalina.home"    value="C:\apache-tomcat-9.0.0.M17"/>
     <property name="manager.url"      value="http://127.0.0.1:8080/manager/text"/>

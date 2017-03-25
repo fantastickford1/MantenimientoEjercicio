@@ -28,7 +28,7 @@
     <div>
       <html:errors />
     </div>
-    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <table class="mdl-data-table mdl-js-data-table">
       <thead>
         <tr>
           <th class="mdl-data-table__cell--non-numeric"><fmt:message key="formaListadoPaises.etiqueta.nombre" /></th>
@@ -44,7 +44,7 @@
                 <td align="left" width="20%">
                     <a href='solicitarModificarPais.do?id=<c:out value="${pais.id}"/>'
 					   class="HipervinculoAdmon">
-                        <fmt:message key="formaListadoEstados.etiqueta.modificar" />
+                        <fmt:message key="formaListadoEstados.etiqueta.modificar"/>
                     </a>
                 </td>
                 <td>
