@@ -31,6 +31,10 @@
                    type="edu.uag.iidis.scec.vista.FormaListarUsuario">
         </form-bean>
 
+        <form-bean name="formaListadoUsuarios"
+                   type="edu.uag.iidis.scec.vista.FormaListarUsuario">
+        </form-bean>
+
         <form-bean name="formaNuevoRol"
                    type="edu.uag.iidis.scec.vista.FormaNuevoRol">
         </form-bean>
@@ -151,6 +155,18 @@
                 scope="request"
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListarUsuario.jsp"/>
+            <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
+
+        <!-- itzel
+        -->
+        <action path="/solicitarListadoUsuarios"
+                type="edu.uag.iidis.scec.control.MCUListarUsuarios"
+                parameter="solicitarListadoUsuarios"
+                name="formaListadoUsuarios"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoUsuarios.jsp"/>
             <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
 
