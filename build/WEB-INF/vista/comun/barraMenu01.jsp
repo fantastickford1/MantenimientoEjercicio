@@ -19,15 +19,15 @@
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">content_paste</i>
         <spam class="mdl-color-text--blue-grey-50">Asig tareas</spam>
       </a>
-      <a class="mdl-navigation__link" href="#">
+      <a class="mdl-navigation__link" href="solicitarListadoUsuarios.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">face</i>
-        <spam class="mdl-color-text--blue-grey-50">Perfil</spam>
+        <spam class="mdl-color-text--blue-grey-50">Perfiles</spam>
       </a>
       <a class="mdl-navigation__link" href="solicitarListarTareas.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">list</i>
         <spam class="mdl-color-text--blue-grey-50">Tareas</spam>
       </a>
-      <a class="mdl-navigation__link" href="#">
+      <a class="mdl-navigation__link" href="solicitarListarSugerencias.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">question_answer</i>
         <spam class="mdl-color-text--blue-grey-50">Sugerencias</spam>
       </a>
