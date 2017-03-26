@@ -12,19 +12,20 @@ color:#006666;
 text-decoration:underline;
 }
 </style>
+
 <script language="javascript" type="text/javascript">
-<!--
-function EliminarRol(strRolName){
-return confirm("�Desea eliminar el rol '" + strRolName + "'?")
-}
--->
+
+function eliminarUsuario(strRolName){
+  alert("desea Borrar");
+-}
 </script>
+
 <br>
-<font size='5'><fmt:message key="FormaListarUsuario.titulo" /></font>
+<font size='5'><fmt:message key="formaListarUsuario.titulo" /></font>
 <table cellpadding="0" cellspacing="0" width="60%" border="0">
     <tr>
         <td colspan="4" style="padding-top:25px; padding-bottom:25px;">
-            <a href="solicitarRegistroUsuario.do" class="HipervinculoAdmon">Agregar nuevo rol...</a>
+            <a href="solicitarRegistro.do" class="HipervinculoAdmon">Agregar nuevo usuario...</a>
         </td>
     </tr>
     <tr>
@@ -42,8 +43,8 @@ return confirm("�Desea eliminar el rol '" + strRolName + "'?")
             <td align="left" width="20%"><c:out value="${usuario.nombre.nombre}"/></td>
             <td align="left" width="60%"><c:out value="${usuario.id}"/></td>
             <td>
-                <a href='procesarEliminarUser.do?id=<c:out value="${usuario.id}"/>'
-         onClick="javascript: return EliminarRol('<c:out value="${usuario.id}"/>')"
+                <a href='procesarEliminarUsuario.do?id=<c:out value="${usuario.id}"/>'
+         onClick="eliminarUsuario('<c:out value="${usuario.id}"/>')"
          class="HipervinculoAdmon">
                     <fmt:message key="formaListarUsuario.etiqueta.eliminar" />
                 </a>

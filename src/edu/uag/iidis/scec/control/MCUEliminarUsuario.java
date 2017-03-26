@@ -35,13 +35,13 @@ public final class MCUEliminarUsuario
               if (log.isDebugEnabled()) {
                   log.debug(">procesarEliminarUsuario");
               }
-/*
+
         FormaEliminarUsuario forma = (FormaEliminarUsuario)form;
         ManejadorUsuarios me = new ManejadorUsuarios();
 
-        me.eliminarUsuario(forma.getUsername());
+        me.eliminarUsuario(forma.getId());
         return (mapping.findForward("exito"));
-        */
-        return (mapping.findForward("exito"));
+
+
     }
 }
