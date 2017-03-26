@@ -26,6 +26,8 @@ public final class FormaNuevaPersona
     private String nombreUsuario;
     private String claveAcceso;
     private String claveAccesoConfirmacion;
+    private float lng;
+    private float lat;
 	private Collection ciudades;
 	private int contador;
 
@@ -124,6 +126,20 @@ public final class FormaNuevaPersona
         return (this.claveAccesoConfirmacion);
     }
 
+    public void setlng(float lng) {
+        this.lng=lng;
+    }
+
+    public float getlng() {
+        return (this.lng);
+    }
+    public void setlat(float lat) {
+        this.lat=lat;
+    }
+
+    public float getlat() {
+        return (this.lat);
+    }
 
     public void reset(ActionMapping mapping,
                       HttpServletRequest request) {
@@ -136,6 +152,7 @@ public final class FormaNuevaPersona
         nombreUsuario=null;
         claveAcceso=null;
         claveAccesoConfirmacion=null;
+      
     }
 
 

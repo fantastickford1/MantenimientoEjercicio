@@ -14,6 +14,8 @@ public class NombrePersona
     private String apellidoMaterno;
     private String posfijo;
     private String iniciales;
+    private float  lng;
+    private float  lat;
 
     public NombrePersona() {}
 
@@ -23,13 +25,17 @@ public class NombrePersona
                          String apellidoPaterno,
                          String apellidoMaterno,
                          String posfijo,
-                         String iniciales) {
+                         String iniciales,
+                         float lng,
+                         float lat) {
         this.prefijo = prefijo;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.posfijo = posfijo;
         this.iniciales = iniciales;
+        this.lng=lng;
+        this.lat=lat;
     }
 
 
@@ -92,11 +98,28 @@ public class NombrePersona
         this.posfijo = posfijo;
     }
 
+    public float getLat() {
+        return lat;
+    }
+
+
+    public void setLat(float lat) {
+        this.lat=lat;
+    }
+
+    public float getLng() {
+        return lng;
+    }
+
+
+    public void setLng(float lng) {
+        this.lng=lng;
+    }
 
     public String getNombreCompleto() {
-        
-        return (nombre + " " + 
-               apellidoPaterno + " " + 
+
+        return (nombre + " " +
+               apellidoPaterno + " " +
                apellidoMaterno);
     }
 

@@ -201,7 +201,7 @@
                    name="formaEliminarUsuario"
                    scope="request"
                    validate="false">
-               <forward name="exito" path="/solicitarEliminarUsuario.do" redirect="true"/>
+               <forward name="exito" path="/solicitarListarUsuarios.do" redirect="true"/>
            </action>
 
 
