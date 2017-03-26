@@ -42,6 +42,9 @@ window.addEventListener('load', iniciar, false);
     }
     </script>
 
+    <script>
+    </script>
+
     <br>
     <font size='5'><fmt:message key="formaNuevaPersona.titulo" /></font>
     <div id="map" style="width:500px;height:250px;"></div>
