@@ -16,7 +16,8 @@ text-decoration:underline;
 <script language="javascript" type="text/javascript">
 
 function eliminarUsuario(strRolName){
-  alert("desea Borrar");
+   return confirm("¿Desea eliminar el usuario'" + strRolName + "'?")
+ }
 -}
 </script>
 
@@ -44,7 +45,7 @@ function eliminarUsuario(strRolName){
             <td align="left" width="60%"><c:out value="${usuario.id}"/></td>
             <td>
                 <a href='procesarEliminarUsuario.do?id=<c:out value="${usuario.id}"/>'
-         onClick="eliminarUsuario('<c:out value="${usuario.id}"/>')"
+         onClick="javascript: return eliminarUsuario('<c:out value="${usuario.id}"/>')"
          class="HipervinculoAdmon">
                     <fmt:message key="formaListarUsuario.etiqueta.eliminar" />
                 </a>

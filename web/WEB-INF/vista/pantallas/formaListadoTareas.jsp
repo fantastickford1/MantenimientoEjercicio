@@ -13,9 +13,11 @@
 <table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
+      <th><fmt:message key="formaListadoTareas.etiqueta.usuario" /></th>
       <th class="mdl-data-table__cell--non-numeric"><fmt:message key="formaListadoTareas.etiqueta.nombre" /></th>
       <th><fmt:message key="formaListadoTareas.etiqueta.descripcion" /></th>
-      <th><fmt:message key="formaListadoTareas.etiqueta.administracion" /></th>
+      <th><fmt:message key="formaListadoTareas.etiqueta.estado" /></th>
+      <th><fmt:message key="formaListadoTareas.etiqueta.actualizar" /></th>
     </tr>
   </thead>
   <tbody>
@@ -26,8 +28,13 @@
             <td align="left" width="60%"> <c:out value="${tarea.descripcion}"/> </td>
             <td align="left" width="60$"> <c:out value="${tarea.estado}"/>      </td>
             <td align="left" width="60%">
-              <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">assignment</i>
+              <select>
+                <option value="Completado"><fmt:message key="formaListadoTareas.etiqueta.completado" /></option>
+                <option value="Terminado"><fmt:message key="formaListadoTareas.etiqueta.terminado" /></option>
+                <option value="Incompleto"><fmt:message key="formaListadoTareas.etiqueta.incompleto" /></option>
+              </select>
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">add</i>
               </button>
             </td>
         </tr>

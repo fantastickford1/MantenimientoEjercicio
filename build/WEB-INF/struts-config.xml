@@ -158,8 +158,7 @@
             <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
 
-        <!-- itzel
-        -->
+        <!-- itzel -->
         <action path="/solicitarListadoUsuarios"
                 type="edu.uag.iidis.scec.control.MCUListarUsuarios"
                 parameter="solicitarListarUsuarios"
