@@ -74,6 +74,11 @@
     <form-bean name="formaListadoSugerencias"
                   type="edu.uag.iidis.scec.vista.FormaListadoSugerencias">
     </form-bean>
+    <form-bean name="formaNuevoSugerencia"
+                  type="edu.uag.iidis.scec.vista.FormaNuevoSugerencia">
+    </form-bean>
+
+
 
     </form-beans>
 
@@ -267,7 +272,7 @@
             <forward name="exito" path="/WEB-INF/vista/pantallas/ListaEstados.jsp"/>
             <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
-  <!-- Definici�n de Sugerencias -->
+  <!-- Definicion de Sugerencias -->
   <action path="/solicitarListarSugerencias"
               type="edu.uag.iidis.scec.control.MCUListarSugerencias"
               parameter="solicitarListarSugerencias"
@@ -276,7 +281,26 @@
               validate="false">
           <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoSugerencias.jsp"/>
           <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
-      </action>
+  </action>
+  <action path="/solicitarRegistroSugerencia"
+          type="edu.uag.iidis.scec.control.MCURegistrarSugerencia"
+          parameter="solicitarRegistroSugerencia"
+          name="formaNuevoSugerencia"
+          scope="request"
+          validate="false">
+        <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoSugerencia.jsp"/>
+        <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+  </action>
+  <action path="/procesarRegistroSugerencia"
+          type="edu.uag.iidis.scec.control.MCURegistrarSugerencia"
+          parameter="procesarRegistroSugerencia"
+          name="formaNuevoSugerencia"
+          scope="request"
+          validate="false"
+          input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoSugerencia.jsp">
+        <forward name="exito" path="/solicitarListarSugerencias.do" redirect="true"/>
+  </action>
+  <!--  -->
         <action path="/solicitarRegistroPais"
                 type="edu.uag.iidis.scec.control.MCURegistrarPais"
                 parameter="solicitarRegistroPais"
