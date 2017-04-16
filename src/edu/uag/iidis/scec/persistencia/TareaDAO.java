@@ -24,8 +24,8 @@ public class TareaDAO {
     }
 
 
-    public Tarea buscarPorId(Long idTarea, boolean bloquear)
-            throws ExcepcionInfraestructura {
+    public Tarea buscarPorId(Long idTarea, boolean bloquear) throws ExcepcionInfraestructura
+    {
 
         Tarea tarea = null;
 
@@ -55,8 +55,8 @@ public class TareaDAO {
     }
 
 
-    public Collection buscarTodos()
-            throws ExcepcionInfraestructura {
+    public Collection buscarTodos() throws ExcepcionInfraestructura
+    {
 
         Collection tareas;
 
@@ -80,9 +80,8 @@ public class TareaDAO {
     }
 
 
-    public Collection buscarPorEjemplo(Tarea tarea)
-            throws ExcepcionInfraestructura {
-
+    public Collection buscarPorEjemplo(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         Collection tareaa;
 
@@ -103,9 +102,63 @@ public class TareaDAO {
         return tareaa;
     }
 
+    public Collection buscarTarea( String tarea ) throws ExcepcionInfraestructura
+    {
+        if (log.isDebugEnabled()) {
+          log.debug("> existeRol(nombreRol)");
+        }
 
-    public void hazPersistente(Tarea tarea)
-            throws ExcepcionInfraestructura {
+        try {
+          String sql = "from Tareas where TareaNombre like '"+ tarea +"'";
+
+          if (log.isDebugEnabled()) {
+            log.debug(sql + tarea);
+          }
+
+          Query query = HibernateUtil.getSession().createQuery(sql);
+
+          if (log.isDebugEnabled()) {
+            log.debug("!!!!!Create query is ok");
+          }
+
+          if (log.isDebugEnabled()) {
+            log.debug("!!!!set Parameter ok antes del query list!!!!");
+          }
+
+          return query.list();
+        }catch (HibernateException e) {
+          if (log.isDebugEnabled()) {
+            log.warn("!! HibernateException !!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          }
+          throw new ExcepcionInfraestructura(e);
+        }
+    }
+
+    public boolean modificar ( Tarea tarea ) throws ExcepcionInfraestructura
+    {
+
+      boolean result = false;
+
+      if (log.isDebugEnabled()) {
+        log.debug(">modificar(tarea)");
+      }
+
+      try {
+        System.out.println(tarea.toString());
+        HibernateUtil.getSession().saveOrUpdate(tarea);
+        result = true;
+      }catch (HibernateException ex) {
+        if (log.isWarnEnabled()) {
+          log.warn("<HibernateException");
+        }
+        throw new ExcepcionInfraestructura(ex);
+      }
+      return result;
+    }
+
+
+    public void hazPersistente(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">hazPersistente(tarea)");
@@ -122,8 +175,8 @@ public class TareaDAO {
     }
 
 
-    public void hazTransitorio(Tarea tarea)
-            throws ExcepcionInfraestructura {
+    public void hazTransitorio(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">hazTransitorio(tarea)");
@@ -139,27 +192,14 @@ public class TareaDAO {
         }
     }
 
-    public boolean existeTareas(String nombreTareas)
-            throws ExcepcionInfraestructura {
+    public boolean existeTareas(String nombreTareas) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">existeRol(nombreRol)");
         }
 
         try {
-
-
-//            String consultaCuentaRoles =
-//            "select count(*) from Ciudad r where r.nombre=?";
-//
- //           int resultado =
- //           ((Integer) HibernateUtil.getSession()
- //                          .find(consultaCuentaRoles,
- //                                nombreRol,
- //                                StringType.INSTANCE)
- //                          .iterator()
- //                          .next()).intValue();
-// de acuerdo al nuevo formato
 
             String hql = "select TareaNombre from Tarea where TareaNombre = :nombreTareas";
 

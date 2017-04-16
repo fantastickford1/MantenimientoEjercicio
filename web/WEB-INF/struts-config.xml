@@ -56,6 +56,9 @@
     <form-bean name="formaListadoTareas"
                    type="edu.uag.iidis.scec.vista.FormaListadoTareas">
         </form-bean>
+    <form-bean name="formaModificarTarea"
+                    type="edu.uag.iidis.scec.vista.FormaModificarTarea">
+    </form-bean>
 		<form-bean name="formaEliminarLugar"
                    type="edu.uag.iidis.scec.vista.FormaEliminarLugar">
         </form-bean>
@@ -226,7 +229,25 @@
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoTareas.jsp"/>
         </action>
-
+        <!-- Modificar Tarea -->
+        <action path="/solicitarModificarTarea"
+                type="edu.uag.iidis.scec.control.MCUModificarTarea"
+                parameter="solicitarModificarTarea"
+                name="formaModificarTarea"
+                scope="request"
+                validate="true">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp"/>
+        </action>
+        <!-- Procesar Modificar Tarea -->
+        <action path="/procesarModificarTarea"
+                type="edu.uag.iidis.scec.control.MCUModificarTarea"
+                parameter="procesarModificarTarea"
+                name="formaModificarTarea"
+                scope="request"
+                validate="true"
+                input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp">
+            <forward name="exito" path="/solicitarListarTareas.do"/>
+        </action>
 		<action path="/solicitarListarEstados"
                 type="edu.uag.iidis.scec.control.MCUListarEstados"
                 parameter="solicitarListarEstados"

@@ -28,14 +28,9 @@
             <td align="left" width="60%"> <c:out value="${tarea.descripcion}"/> </td>
             <td align="left" width="60$"> <c:out value="${tarea.estado}"/>      </td>
             <td align="left" width="60%">
-              <select>
-                <option value="Completado"><fmt:message key="formaListadoTareas.etiqueta.completado" /></option>
-                <option value="Terminado"><fmt:message key="formaListadoTareas.etiqueta.terminado" /></option>
-                <option value="Incompleto"><fmt:message key="formaListadoTareas.etiqueta.incompleto" /></option>
-              </select>
-              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+              <a href='solicitarModificarTarea.do?id=<c:out value="${tarea.id}"/>&usuario=<c:out value="${tarea.usuario}"/>&nombre=<c:out value="${tarea.nombre}"/>&descripcion=<c:out value="${tarea.descripcion}"/>&estado=<c:out value="${tarea.estado}"/>' class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
                 <i class="material-icons">add</i>
-              </button>
+              </a>
             </td>
         </tr>
     </c:forEach>

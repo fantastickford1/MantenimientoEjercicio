@@ -39,6 +39,53 @@ public class ManejadorTareas {
         }
     }
 
+    public Collection listarTareasPorNombre(String nombre)
+    {
+      Collection resultado;
+
+      if (log.isDebugEnabled()) {
+        log.debug(">guardarUsuario(usuario)");
+      }
+
+      try {
+        HibernateUtil.beginTransaction();
+        resultado = dao.buscarTarea(nombre);
+        log.debug("Consulta: " + resultado);
+        HibernateUtil.commitTransaction();
+        return resultado;
+      } catch (ExcepcionInfraestructura e) {
+        HibernateUtil.rollbackTransaction();
+        return null;
+      } finally {
+        HibernateUtil.closeSession();
+      }
+
+
+    }
+
+    public boolean modificarTarea( Tarea tarea){
+
+      boolean result = false;
+
+      if (log.isDebugEnabled()) {
+        log.debug(">guardarTarea(tarea)");
+      }
+
+      try {
+        HibernateUtil.beginTransaction();
+        result = dao.modificar(tarea);
+        HibernateUtil.commitTransaction();
+      }catch (ExcepcionInfraestructura e) {
+        HibernateUtil.rollbackTransaction();
+        if (log.isWarnEnabled()) {
+          log.warn("< ExcepcionInfraestructura");
+        }
+      }finally {
+        HibernateUtil.closeSession();
+      }
+      return result;
+    }
+
     public void eliminarTareas(Long id) {
         if (log.isDebugEnabled()) {
             log.debug(">eliminarTareas(tarea)");
