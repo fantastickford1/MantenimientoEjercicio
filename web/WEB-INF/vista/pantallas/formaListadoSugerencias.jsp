@@ -7,15 +7,14 @@
                 <!-- Floating Multiline Textfield -->
                 <form action="#">
                   <div class="mdl-textfield mdl-js-textfield">
-                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="txtarea" >
+                    <div style="text-align: left;">
                       <c:forEach var="sugerencia" items="${formaListadoSugerencias.sugerencias}">
                           <tr>
-                              <td align="left" width="20%"><c:out value="${sugerencia.nombre}"/></td>
+                              <td class="negritas" align="left" width="20%"><c:out value="${sugerencia.nombre}"/>:</td>
                               <td align="left" width="60%"><c:out value="${sugerencia.sugerencia}"/></td>
-                          </tr>
+                          </tr><br>
                       </c:forEach>
-                    </textarea>
-                    <label class="mdl-textfield__label" for="txtarea"></label>
+                    </div><br>
                   </div>
 
                   <!-- Input Name -->
