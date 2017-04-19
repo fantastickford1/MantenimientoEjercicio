@@ -19,6 +19,8 @@
             <property name="apellidoMaterno" column="nombreApellidoMaterno" />
             <property name="posfijo" column="nombrePosfijo" />
             <property name="iniciales" column="nombreIniciales"/>
+            <property name="lng" column="lng"/>
+            <property name="lat" column="lat"/>
         </component>
 
         <component name="credencial">

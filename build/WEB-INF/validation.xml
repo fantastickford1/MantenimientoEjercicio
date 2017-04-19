@@ -5,14 +5,14 @@
           "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
 
 <!--
-    Reglas de validación para la aplicación SCEC
+    Reglas de validaciï¿½n para la aplicaciï¿½n SCEC
 -->
 
 <form-validation>
     <global>
         <constant>
             <constant-name>alfabetico</constant-name>
-            <constant-value>^[a-zA-ZáéíóúñÑ ]*$</constant-value>
+            <constant-value>^[a-zA-Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ]*$</constant-value>
         </constant>
     </global>
 
@@ -48,6 +48,21 @@
                 </var>
             </field>
 
+            <field property="lng"
+             depends="required,validwhen">
+              <msg name="validwhen" key="errors.alMenosUnCampo"/>
+                <arg0 key="formaNuevaPersona.etiqueta.lng"/>
+                <arg1 key="formaNuevaPersona.etiqueta.lng"/>
+            </field>
+
+            <field property="lat"
+             depends="required,validwhen">
+             <msg name="validwhen" key="errors.alMenosUnCampo"/>
+                <arg0 key="formaNuevaPersona.etiqueta.lat"/>
+                <arg1 key="formaNuevaPersona.etiqueta.lat"/>
+            </field>
+
+
             <field property="apellidoPaterno"
          	   depends="mask">
                 <msg name="mask" key="errors.mascaraa-zA-Z"/>
@@ -78,10 +93,10 @@
          	   depends="required,minlength,maxlength">
                 <arg0 key="formaNuevaPersona.etiqueta.nombreUsuario"/>
                 <arg1 name="minlength"
-                      key="${var:minlength}" 
+                      key="${var:minlength}"
                       resource="false"/>
                 <arg1 name="maxlength"
-                      key="${var:maxlength}" 
+                      key="${var:maxlength}"
                       resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
@@ -98,10 +113,10 @@
          	   depends="required,minlength,maxlength">
                 <arg0 key="formaNuevaPersona.etiqueta.claveAcceso"/>
                 <arg1 name="minlength"
-                      key="${var:minlength}" 
+                      key="${var:minlength}"
                       resource="false"/>
                 <arg1 name="maxlength"
-                      key="${var:maxlength}" 
+                      key="${var:maxlength}"
                       resource="false"/>
                 <var>
                     <var-name>minlength</var-name>

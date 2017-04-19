@@ -7,10 +7,10 @@
 			<title>Administrador de Roles - UPCHIAPAS</title>
       <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 			<script type="text/javascript" src="js/Ajax.js"></script>
-			<script type="text/javascript" src="js/regUser.js"></script>
+
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link rel="stylesheet" type="text/css" href="css/material.min.css">
-				<link rel="stylesheet" type="text/css" href="css/regUser.css">
+
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 			<link rel="stylesheet" type="text/css" href="css/style.css">
 	    <link rel="stylesheet" type="text/css" href="css/plantilla.css">

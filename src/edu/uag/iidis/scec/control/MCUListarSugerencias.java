@@ -70,7 +70,7 @@ public final class MCUListarSugerencias
 
     }
 
-	public ActionForward buscarEstado(
+	public ActionForward buscarSugerencia(
                 ActionMapping mapping,
                 ActionForm form,
                 HttpServletRequest request,

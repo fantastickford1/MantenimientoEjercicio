@@ -2,10 +2,52 @@
     <%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt" %>
     <%@ taglib uri="/WEB-INF/vista/etiquetas/struts-html.tld" prefix="html" %>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_CRCGEtHrjlCvirADKVClFonjDdx2pRM"></script>
+    <script>
+
+window.addEventListener('load', iniciar, false);
+
+    function iniciar() {
+      var marker;
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 16.75, lng: -93.1667}
+        });
+
+        marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 16.75 , lng: -93.1667}
+        });
+      //  var markerLatLng = marker.getPosition();
+
+      //  console.long(markerLatLng.lat());
+      document.getElementById('test').value = "16.75";
+      document.getElementById('test2').value = "-93.1667"
+
+        google.maps.event.addListener(marker, 'mouseup', function(){
+           toggleBounce(marker);
+       });
+      }
+
+    function  toggleBounce(marker) {
+
+      var markerLatLng = marker.getPosition();
+    //  console.long(markerLatLng.lat());
+    document.getElementById('test').value = markerLatLng.lat();
+    document.getElementById('test2').value = markerLatLng.lng();
+    }
+    </script>
+
+    <script>
+    </script>
 
     <br>
     <font size='5'><fmt:message key="formaNuevaPersona.titulo" /></font>
-
+    <div id="map" style="width:500px;height:250px;"></div>
     <form id="forma" action="procesarRegistro.do" method="post">
         <table>
             <tr>
@@ -33,7 +75,7 @@
                     <input type="text"
                            name="nombre"
                            size="50"
-                           maxlength="100"
+                           maxlength="7"
                            value="${formaNuevaPersona.nombre}" />
                 </td>
             </tr>
@@ -100,11 +142,40 @@
                 </td>
             </tr>
             <tr>
+                <td align="right">
+                    <fmt:message key="formaNuevaPersona.etiqueta.lng" />
+                </td>
+                <td align="left">
+                    <input type="text"
+                           name="lat"
+                           size="50"
+                           maxlength="100"
+                           id="test"
+                           readonly
+                           value="${formaNuevaPersona.lng}"
+                          />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <fmt:message key="formaNuevaPersona.etiqueta.lat" />
+                </td>
+                <td align="left">
+                    <input type="text"
+                           name="lng"
+                           size="50"
+                           maxlength="100"
+                           id="test2"
+                           readonly
+                            value="${formaNuevaPersona.lat}"
+                          />
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2" align="center">
-                  <input type="submit"
-                         name="submit"
-                         value="Modificar"
-                         onclick="Location.href='solicitarEliminarUsuario.do'"/>
+                  <input type="button"
+                         value="direccion"
+                        onclick="iniciar()" />
                     <input type="submit"
                            name="submit"
                            value="Agregar y terminar"/>

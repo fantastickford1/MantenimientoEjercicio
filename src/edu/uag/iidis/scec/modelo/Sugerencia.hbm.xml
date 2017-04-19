@@ -2,11 +2,13 @@
 
 <hibernate-mapping>
     <class name="edu.uag.iidis.scec.modelo.Sugerencia"
-           table="sugerencias">
+           table="Sugerencias">
 
         <id name="id"
             column="id"
             type="java.lang.Long">
+            <generator class="increment">
+            </generator>
         </id>
 
         <property name="nombre"

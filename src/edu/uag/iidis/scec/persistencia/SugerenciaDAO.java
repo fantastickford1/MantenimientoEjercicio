@@ -161,7 +161,7 @@ public class SugerenciaDAO {
  //                          .next()).intValue();
 // de acuerdo al nuevo formato
 
-            String hql = "select nombre from sugerencias where nombre = :nombre";
+            String hql = "select nombre from Sugerencias where nombre = :nombre";
 
              if (log.isDebugEnabled()) {
                  log.debug(hql + nombreSugerencia);
@@ -204,7 +204,7 @@ public class SugerenciaDAO {
           }
 
           try {
-              String hql = "from sugerencias where nombre like '"+nombreSugerencia+"%'";
+              String hql = "from Sugerencias where nombre like '"+nombreSugerencia+"%'";
 
                if (log.isDebugEnabled()) {
                    log.debug(hql + nombreSugerencia);
