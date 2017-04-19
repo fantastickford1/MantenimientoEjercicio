@@ -5,6 +5,9 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.validator.ValidatorForm;
 
+/**
+ * 
+ */
 public final class FormaModificarTarea extends ValidatorForm {
 
   private Long id;
@@ -93,6 +96,12 @@ public final class FormaModificarTarea extends ValidatorForm {
 		this.usuario = usuario;
 	}
 
+ /**
+  * [validate description]
+  * @param  ActionMapping      mapping       [description]
+  * @param  HttpServletRequest request       [description]
+  * @return                    [description]
+  */
   @Override
   public ActionErrors validate( ActionMapping mapping, HttpServletRequest request)
   {
@@ -100,6 +109,10 @@ public final class FormaModificarTarea extends ValidatorForm {
     return errors;
   }
 
+/**
+ * [toString description]
+ * @return [description]
+ */
   @Override
   public String toString(){
     return "FormaModificarTarea{id= " + id + ", nombre= "+ nombre +"}";

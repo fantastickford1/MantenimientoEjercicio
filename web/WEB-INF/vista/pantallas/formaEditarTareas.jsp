@@ -28,6 +28,7 @@
     <label class="mdl-textfield__label" for="estado"><fmt:message key="formaListadoTareas.etiqueta.estado" /></label>
   </div>
   <input value="${formaModificarTarea.id}" name="id" style="display: none"/>
+  <br>
   <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit">
     <i class="material-icons">send</i>
     Modificar

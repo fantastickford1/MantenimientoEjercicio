@@ -10,15 +10,26 @@ import edu.uag.iidis.scec.excepciones.*;
 import edu.uag.iidis.scec.persistencia.TareaDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
 
+/**
+ * Esta clase facilita las transacciones con la persistencia
+ * @author Karlos
+ * @version 1.0
+ */
 public class ManejadorTareas {
     private Log log = LogFactory.getLog(ManejadorTareas.class);
     private TareaDAO dao;
 
+/**
+ * Construcctor del manejador
+ */
     public ManejadorTareas() {
         dao = new TareaDAO();
     }
 
-
+/**
+ * Lista todas las tareas mediante el dao
+ * @return Collection de todas las tareas
+ */
     public Collection listarTareas() {
         Collection resultado;
 
@@ -38,7 +49,11 @@ public class ManejadorTareas {
             HibernateUtil.closeSession();
         }
     }
-
+/**
+ * Lista las tareas por un atributo
+ * @param  String nombre        atributo al ordenar
+ * @return        Collection de las tareas ordenadas por el atributo
+ */
     public Collection listarTareasPorNombre(String nombre)
     {
       Collection resultado;
@@ -63,6 +78,11 @@ public class ManejadorTareas {
 
     }
 
+/**
+ * Modifica la tarea
+ * @param  Tarea tarea         Tarea al cual actualizar
+ * @return       true or false
+ */
     public boolean modificarTarea( Tarea tarea){
 
       boolean result = false;
@@ -85,7 +105,10 @@ public class ManejadorTareas {
       }
       return result;
     }
-
+/**
+ * Elimina una tarea
+ * @param Long id ID de la tarea a eliminar
+ */
     public void eliminarTareas(Long id) {
         if (log.isDebugEnabled()) {
             log.debug(">eliminarTareas(tarea)");
@@ -108,6 +131,11 @@ public class ManejadorTareas {
 
     }
 
+/**
+ * Crea una tarea
+ * @param  Tarea tarea         Tarea a crear
+ * @return       1 si ya existe, 0 si se logro exitosamente y 2 si ocurrio una falla
+ */
     public int crearTarea(Tarea tarea) {
 
         int resultado;

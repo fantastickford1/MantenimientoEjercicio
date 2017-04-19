@@ -7,14 +7,15 @@
     <id name="id"
         column="idTareas"
         type="java.lang.Long"
-        unsaved-value="null" >
+        unsaved-value="null">
         <generator class="increment">
         </generator>
     </id>
 
     <property name="nombre"
               column="TareaNombre"
-              type="java.lang.String" />
+              type="java.lang.String"
+              unique="true" />
 
     <property name="descripcion"
               column="TareaDescripcion"

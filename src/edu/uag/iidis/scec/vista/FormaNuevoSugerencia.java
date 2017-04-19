@@ -10,6 +10,9 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.validator.ValidatorForm;
 import org.apache.struts.upload.FormFile;
 
+/**
+ *
+ */
 public final class FormaNuevoSugerencia extends ValidatorForm {
 
   private String nombre;
@@ -68,7 +71,7 @@ public final class FormaNuevoSugerencia extends ValidatorForm {
 	}
 
   /**
-   *vuelve los valores nulos
+   *resetea las sugerencias
    *
    *@param mapping acciones
    *@param request informacion

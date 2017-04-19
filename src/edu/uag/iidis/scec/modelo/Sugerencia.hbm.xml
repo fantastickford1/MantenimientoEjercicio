@@ -2,7 +2,7 @@
 
 <hibernate-mapping>
     <class name="edu.uag.iidis.scec.modelo.Sugerencia"
-           table="Sugerencias">
+           table="sugerencias">
 
         <id name="id"
             column="id"

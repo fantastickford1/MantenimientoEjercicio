@@ -22,10 +22,24 @@ import java.io.*;
 import java.util.*;
 import org.apache.struts.upload.FormFile;
 
+/**
+ * Esta clase registra las sugerencias en la base de datos
+ *@author Diana
+ *@version 1.0
+ */
 public final class MCURegistrarSugerencia extends MappingDispatchAction{
 
    private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
+/**
+ * Solicita un registro de una sugerencia
+ * @param  ActionMapping       mapping       Informacion del mapeo de accion
+ * @param  ActionForm          form          Datos mandados por la vista
+ * @param  HttpServletRequest  request       Provee información requerida por HTTP servlets
+ * @param  HttpServletResponse response      Servlet que se encarga de enviar una respuesta
+ * @return  ActionForward      exito o fracaso
+ * @throws Exception           Error en la transaccion
+ */
    public ActionForward solicitarRegistroSugerencia(ActionMapping mapping,ActionForm form, HttpServletRequest request,HttpServletResponse response) throws Exception {
 
      if (log.isDebugEnabled()) {
@@ -59,6 +73,16 @@ public final class MCURegistrarSugerencia extends MappingDispatchAction{
 
    }
 
+/**
+ * Registra una sugerencia
+ * Recibe el form y mediante el metodo crearSugerencia del manejador se registra en la base de datos
+ * @param  ActionMapping       mapping       Informacion del mapeo de accion
+ * @param  ActionForm          form          Datos mandados por la vista
+ * @param  HttpServletRequest  request       Provee información requerida por HTTP servlets
+ * @param  HttpServletResponse response      Servlet que se encarga de enviar una respuesta
+ * @return  ActionForward      exito o fracaso
+ * @throws Exception           Error en la transaccion
+ */
    public ActionForward procesarRegistroSugerencia(ActionMapping mapping,ActionForm form,HttpServletRequest request,HttpServletResponse response)throws Exception
    {
      if (log.isDebugEnabled()) {

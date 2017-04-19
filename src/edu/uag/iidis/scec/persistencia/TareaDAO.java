@@ -15,7 +15,11 @@ import org.apache.commons.logging.LogFactory;
 import java.util.Collection;
 import java.util.List;
 
-
+/**
+ * Esta clase tiene lo necesario para la persistencia de los datos
+ * @author Karlos
+ * @version 1.0
+ */
 public class TareaDAO {
 
     private Log log = LogFactory.getLog(TareaDAO.class);
@@ -23,7 +27,13 @@ public class TareaDAO {
     public TareaDAO() {
     }
 
-
+/**
+ * Busca por id las tareas
+ * @param  Long                     idTarea       Id de la tarea a buscar
+ * @param  boolean                  bloquear      verdadero o falso
+ * @return                          Tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Tarea buscarPorId(Long idTarea, boolean bloquear) throws ExcepcionInfraestructura
     {
 
@@ -54,7 +64,11 @@ public class TareaDAO {
         return tarea;
     }
 
-
+/**
+ * Busca todas las tareas
+ * @return Collection con todas las tareas
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscarTodos() throws ExcepcionInfraestructura
     {
 
@@ -79,7 +93,12 @@ public class TareaDAO {
         return tareas;
     }
 
-
+/**
+ * Busca una tarea
+ * @param  Tarea                    tarea         Tarea a buscar
+ * @return                          Collection con la tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscarPorEjemplo(Tarea tarea) throws ExcepcionInfraestructura
     {
 
@@ -102,6 +121,12 @@ public class TareaDAO {
         return tareaa;
     }
 
+/**
+ * Busca una tarea
+ * @param  String                   tarea         nombre de la tarea a buscar
+ * @return                          Collection con la tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscarTarea( String tarea ) throws ExcepcionInfraestructura
     {
         if (log.isDebugEnabled()) {
@@ -134,6 +159,12 @@ public class TareaDAO {
         }
     }
 
+/**
+ * Modifica una tarea
+ * @param  Tarea                    tarea         Tarea a modificar
+ * @return                          true o false
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public boolean modificar ( Tarea tarea ) throws ExcepcionInfraestructura
     {
 
@@ -156,7 +187,11 @@ public class TareaDAO {
       return result;
     }
 
-
+/**
+ * Hace persistente una Tarea
+ * @param  Tarea                    tarea         Tarea a hacer persistente
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public void hazPersistente(Tarea tarea) throws ExcepcionInfraestructura
     {
 
@@ -174,7 +209,11 @@ public class TareaDAO {
         }
     }
 
-
+/**
+ * Termina una sesion
+ * @param  Tarea                    tarea         Tarea a terminar sesion
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public void hazTransitorio(Tarea tarea) throws ExcepcionInfraestructura
     {
 
@@ -192,6 +231,12 @@ public class TareaDAO {
         }
     }
 
+/**
+ * Comprueva si la tarea existe
+ * @param  String                   nombreTareas  Tarea a comprovar
+ * @return                          true o false
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public boolean existeTareas(String nombreTareas) throws ExcepcionInfraestructura
     {
 

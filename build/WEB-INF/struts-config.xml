@@ -53,6 +53,7 @@
 		<form-bean name="formaListadoPaises"
                    type="edu.uag.iidis.scec.vista.FormaListadoPaises">
         </form-bean>
+        <!--  Tareas -->
     <form-bean name="formaListadoTareas"
                    type="edu.uag.iidis.scec.vista.FormaListadoTareas">
         </form-bean>
@@ -249,8 +250,7 @@
                 parameter="procesarModificarTarea"
                 name="formaModificarTarea"
                 scope="request"
-                validate="true"
-                input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp">
+                validate="false">
             <forward name="exito" path="/solicitarListarTareas.do"/>
         </action>
 		<action path="/solicitarListarEstados"

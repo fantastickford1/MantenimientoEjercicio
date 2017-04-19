@@ -19,13 +19,27 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.MappingDispatchAction;
 
 
-
+/**
+ * Esta clase lista las sugerencias usando el ManejadorSugerencias, FormaListadoSugerencias
+ * y el modelo Sugerencia
+ *@author Diana
+ *@version 1.0
+ */
 public final class MCUListarSugerencias
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
-
+/**
+ * Lista las sugerencias haciendo uso del metodo listarSugerencias del
+ * ManejadorSugerencias para setearlo al FormaListadoSugerencias
+ * @param  ActionMapping       mapping       Informacion del mapeo de accion
+ * @param  ActionForm          form          Datos mandados por la vista
+ * @param  HttpServletRequest  request       Provee información requerida por HTTP servlets
+ * @param  HttpServletResponse response      Servlet que se encarga de enviar una respuesta
+ * @return  ActionForward      exito o fracaso
+ * @throws Exception           Error en la transaccion
+ */
     public ActionForward solicitarListarSugerencias(
                 ActionMapping mapping,
                 ActionForm form,
@@ -70,6 +84,16 @@ public final class MCUListarSugerencias
 
     }
 
+/**
+ * Busca una sugerencia
+ * Castea el form recibido para mandar al manejador a realizar el metodo de listarSugerenciaPorNombre
+ * @param  ActionMapping       mapping       Informacion del mapeo de accion
+ * @param  ActionForm          form          Datos mandados por la vista
+ * @param  HttpServletRequest  request       Provee información requerida por HTTP servlets
+ * @param  HttpServletResponse response      Servlet que se encarga de enviar una respuesta
+ * @return  ActionForward      exito o fracaso
+ * @throws Exception           Error en la transaccion
+ */
 	public ActionForward buscarSugerencia(
                 ActionMapping mapping,
                 ActionForm form,
