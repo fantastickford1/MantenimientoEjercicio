@@ -12,19 +12,19 @@
 </div>
 <form class="" action="procesarModificarTarea.do" method="post">
   <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" required="required" id="usuario" value="${formaModificarTarea.usuario}">
+    <input class="mdl-textfield__input" type="text" required="required" id="usuario" value="${formaModificarTarea.usuario}" name="usuario">
     <label class="mdl-textfield__label" for="usuario"><fmt:message key="formaListadoTareas.etiqueta.usuario" /></label>
   </div>
   <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" required="required" id="nombre" value="${formaModificarTarea.nombre}">
+    <input class="mdl-textfield__input" type="text" required="required" id="nombre" value="${formaModificarTarea.nombre}" name="nombre">
     <label class="mdl-textfield__label" for="nombre"><fmt:message key="formaListadoTareas.etiqueta.nombre" /></label>
   </div>
   <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" required="required" id="descripcion" value="${formaModificarTarea.descripcion}">
+    <input class="mdl-textfield__input" type="text" required="required" id="descripcion" value="${formaModificarTarea.descripcion}" name="descripcion">
     <label class="mdl-textfield__label" for="descripcion"><fmt:message key="formaListadoTareas.etiqueta.descripcion" /></label>
   </div>
   <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" required="required" id="estado" value="${formaModificarTarea.estado}">
+    <input class="mdl-textfield__input" type="text" required="required" id="estado" value="${formaModificarTarea.estado}" name="estado">
     <label class="mdl-textfield__label" for="estado"><fmt:message key="formaListadoTareas.etiqueta.estado" /></label>
   </div>
   <input value="${formaModificarTarea.id}" name="id" style="display: none"/>

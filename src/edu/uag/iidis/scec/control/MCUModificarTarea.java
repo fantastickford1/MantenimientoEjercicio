@@ -58,7 +58,7 @@ public final class MCUModificarTarea extends MappingDispatchAction {
   {
 
     if (log.isDebugEnabled()) {
-      log.debug("> procesarModificarEstado");
+      log.debug("> procesarModificarTarea");
     }
 
     if (isCancelled(request)) {
@@ -71,7 +71,8 @@ public final class MCUModificarTarea extends MappingDispatchAction {
     }
 
     FormaModificarTarea formaModificarTarea  = (FormaModificarTarea) form;
-    System.out.println(formaModificarTarea);
+    System.out.println("FORM!!!!!>>>> "+form);
+    System.out.println(">>>>>>>>>>>>>>>"+formaModificarTarea);
     Tarea tarea =  new Tarea(
       formaModificarTarea.getNombre(), formaModificarTarea.getDescripcion(),
       formaModificarTarea.getEstado(), formaModificarTarea.getUsuario()

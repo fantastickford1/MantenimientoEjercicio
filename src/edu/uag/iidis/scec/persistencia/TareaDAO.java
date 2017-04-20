@@ -176,6 +176,7 @@ public class TareaDAO {
 
       try {
         System.out.println(tarea.toString());
+        log.debug("Tarea a modificar >>>>>>>"+ tarea + "<<<<<<<");
         HibernateUtil.getSession().saveOrUpdate(tarea);
         result = true;
       }catch (HibernateException ex) {

@@ -250,7 +250,8 @@
                 parameter="procesarModificarTarea"
                 name="formaModificarTarea"
                 scope="request"
-                validate="false">
+                validate="false"
+                input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp">
             <forward name="exito" path="/solicitarListarTareas.do"/>
         </action>
 		<action path="/solicitarListarEstados"
