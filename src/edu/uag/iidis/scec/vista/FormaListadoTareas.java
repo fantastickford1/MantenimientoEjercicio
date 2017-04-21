@@ -10,9 +10,9 @@ import org.apache.struts.validator.ValidatorForm;
 
 
 /**
- * Form bean para el registro de una nueva persona.
+ * Form bean para el listado de Tareas.
  *
- * @author Victor Ramos
+ * @author Karlos
  */
 public final class FormaListadoTareas
         extends ValidatorForm {
@@ -20,7 +20,10 @@ public final class FormaListadoTareas
     private Collection tareas;
     private int contador;
 
-
+/**
+ * establece las tareas en la Collection
+ * @param Collection tareas tareas
+ */
     public void setTareas(Collection tareas) {
         this.tareas = tareas;
         if (tareas != null) {
@@ -28,23 +31,39 @@ public final class FormaListadoTareas
         } else
           this.contador = -1;
     }
-
+/**
+ * regresa la coleccion de todos las tareas
+ * @return Collection de tareas
+ */
     public Collection getTareas() {
         return (this.tareas);
     }
 
+/**
+ * regresa el numero de Tareas
+ * @return entero con el numero de tareas
+ */
     public int getContador() {
         return (this.contador);
     }
 
-
+/**
+ * Elimina todos los hoteles
+ * @param ActionMapping      mapping acciones
+ * @param HttpServletRequest request informacion
+ */
     public void reset(ActionMapping mapping,
                       HttpServletRequest request) {
         contador=0;
         tareas =null;
     }
 
-
+/**
+ * realiza las validaciones proporcionadas por Struts-Validator
+ * @param  ActionMapping      mapping       Acciones
+ * @param  HttpServletRequest request       Informacion
+ * @return                    Errores en la transaccion
+ */
     public ActionErrors validate(ActionMapping mapping,
                                  HttpServletRequest request) {
 

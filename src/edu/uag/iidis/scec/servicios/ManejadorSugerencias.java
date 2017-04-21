@@ -10,15 +10,25 @@ import edu.uag.iidis.scec.excepciones.*;
 import edu.uag.iidis.scec.persistencia.SugerenciaDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
 
+/**
+ * Esta clase facilita las transacciones con la persistencia
+ *@author Diana
+ *@version 1.0
+ */
 public class ManejadorSugerencias {
     private Log log = LogFactory.getLog(ManejadorSugerencias.class);
     private SugerenciaDAO dao;
-
+/**
+ * Construcctor del manejador
+ */
     public ManejadorSugerencias() {
         dao = new SugerenciaDAO();
     }
 
-
+/**
+ * Lista todas las sugerencias usando el metodo buscarTodos de la capa de persistencia
+ * @return Collection con todas las sugerencias
+ */
     public Collection listarSugerencias() {
         Collection resultado;
 
@@ -38,7 +48,12 @@ public class ManejadorSugerencias {
             HibernateUtil.closeSession();
         }
     }
-
+/**
+ * Lista las sugerencias por un atributo dado usando el metodo
+ * buscaSugerencia de la capa de persistencia
+ * @param  String nombre        atributo
+ * @return        Collection con todas las sugerencias
+ */
 	public Collection listarSugerenciaPorNombre(String nombre) {
         Collection resultado;
 
@@ -60,7 +75,10 @@ public class ManejadorSugerencias {
         }
     }
 
-
+/**
+ * Elimina una sugerencia usando el metodo hazTransitorio de la capa de persistencia
+ * @param Long id ID de la sugerencia a eliminar
+ */
     public void eliminarSugerencia(Long id) {
         if (log.isDebugEnabled()) {
             log.debug(">eliminarSugerencia(sugerencia)");
@@ -82,7 +100,11 @@ public class ManejadorSugerencias {
         }
 
     }
-
+/**
+ * Inserta una sugerencia en la base de datos usando hazPersistente de la capa de persistencia
+ * @param  Sugerencia sugerencia    Sugerencia a agregar
+ * @return            1 si ya existe, 0 si se logro exitosamente y 2 si ocurrio una falla
+ */
     public int crearSugerencia(Sugerencia sugerencia) {
 
         int resultado;

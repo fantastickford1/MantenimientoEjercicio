@@ -5,17 +5,17 @@
 <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid square-login-sugerencia">
 
                 <!-- Floating Multiline Textfield -->
+<<<<<<< HEAD
                 <form action="#">
                   <div class="mdl-textfield mdl-js-textfield">
-                    <textarea class="mdl-textfield__input" type="text" rows= "3" id="txtarea" >
+                    <div style="text-align: left;">
                       <c:forEach var="sugerencia" items="${formaListadoSugerencias.sugerencias}">
                           <tr>
-                              <td align="left" width="20%"><c:out value="${sugerencia.nombre}"/></td>
+                              <td class="negritas" align="left" width="20%"><c:out value="${sugerencia.nombre}"/>:</td>
                               <td align="left" width="60%"><c:out value="${sugerencia.sugerencia}"/></td>
-                          </tr>
+                          </tr><br>
                       </c:forEach>
-                    </textarea>
-                    <label class="mdl-textfield__label" for="txtarea"></label>
+                    </div><br>
                   </div>
 
                   <!-- Input Name -->
@@ -34,4 +34,21 @@
                     Publicar
                   </button>
                 </form>
+=======
+                <div>
+                  <html:errors />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                    <c:forEach var="sugerencia" items="${formaListadoSugerencias.sugerencias}">
+                      <span><c:out value="${sugerencia.nombre}"/></span>
+                      <textarea class="mdl-textfield__input" type="text" rows= "3" id="txtarea" >
+                          <c:out value="${sugerencia.sugerencia}"/>
+                      </textarea>
+                    </c:forEach>
+                </div>
+                <a href="solicitarRegistroSugerencia.do" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  <i class="material-icons">send</i>
+                  Publicar
+                </a>
+>>>>>>> 3ebff8cf6576e97ce24cb722a7dc9509e5708e48
 </div>

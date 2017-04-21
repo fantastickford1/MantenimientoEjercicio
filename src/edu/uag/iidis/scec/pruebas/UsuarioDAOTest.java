@@ -22,19 +22,16 @@ public class UsuarioDAOTest extends TestCase {
     private static RolDAO rolDAO = null;
 
     protected void setUp() throws Exception {
-        // se ejecuta al inicio de cada mÈtodo de prueba
+        // se ejecuta al inicio de cada m√©todo de prueba
     }
 
     protected void tearDown() {
-        // se ejecuta al final de cada mÈtodo de prueba
+        // se ejecuta al final de cada m√©todo de prueba
     }
 
     public void testCrearUsuario() throws Exception {
         Usuario usuario = new Usuario(
-                    new NombrePersona("Ing.",
-                                      "Gonzalo",
-                                      "Osuna", "Mill·n", 
-                                      "", "gom"),
+                    new NombrePersona("Ing.","Gonzalo","Osuna", "Mill√°n","", "gom",1.4512f,2.14512f),
                     new Credencial("gosuna","123"));
         try {
             HibernateUtil.beginTransaction();
@@ -58,17 +55,14 @@ public class UsuarioDAOTest extends TestCase {
 
     public void testCrearUsuarioInvalido() throws Exception {
         Usuario usuario = new Usuario(
-                    new NombrePersona("Ing.",
-                                      "Gonzalo",
-                                      "Osuna", "Mill·n", 
-                                      "", "gom"),
+                    new NombrePersona("Ing.","Gonzalo","Osuna", "Mill√°n","", "gom",1.4512f,2.145f),
                     new Credencial("gosuna","123"));
 
         try {
             HibernateUtil.beginTransaction();
             dao.hazPersistente(usuario);
             HibernateUtil.commitTransaction();
-            fail("FallÛ");
+            fail("Fall√≥");
         } catch (Exception e) {
             HibernateUtil.rollbackTransaction();
         } finally{

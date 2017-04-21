@@ -3,6 +3,11 @@ package edu.uag.iidis.scec.modelo;
 import java.io.Serializable;
 import java.util.*;
 
+/**
+ * Representacion de una Tarea
+ * @author Karlos
+ * @version 1.0
+ */
 public class Tarea extends ClaseBase implements Serializable {
 
   private Long id;
@@ -13,11 +18,22 @@ public class Tarea extends ClaseBase implements Serializable {
 
   public Tarea(){}
 
+/**
+ * Constructor que recibe un id
+ * @param  Long id            id de la Tarea
+ */
   public Tarea(Long id)
   {
     this.id = id;
   }
 
+/**
+ * Constructor que recibe 4 parametros
+ * @param  String nombre        nombre de la tarea
+ * @param  String descripcion   descripcion de la tarea
+ * @param  String estado        estado de la tarea
+ * @param  String usuario       usuario de la tarea
+ */
   public Tarea(String nombre, String descripcion, String estado, String usuario)
   {
     this.nombre = nombre;

@@ -15,7 +15,11 @@ import org.apache.commons.logging.LogFactory;
 import java.util.Collection;
 import java.util.List;
 
-
+/**
+ * Esta clase tiene lo necesario para la persistencia de los datos
+ * @author Karlos
+ * @version 1.0
+ */
 public class TareaDAO {
 
     private Log log = LogFactory.getLog(TareaDAO.class);
@@ -23,9 +27,15 @@ public class TareaDAO {
     public TareaDAO() {
     }
 
-
-    public Tarea buscarPorId(Long idTarea, boolean bloquear)
-            throws ExcepcionInfraestructura {
+/**
+ * Busca por id las tareas
+ * @param  Long                     idTarea       Id de la tarea a buscar
+ * @param  boolean                  bloquear      verdadero o falso
+ * @return                          Tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public Tarea buscarPorId(Long idTarea, boolean bloquear) throws ExcepcionInfraestructura
+    {
 
         Tarea tarea = null;
 
@@ -54,9 +64,13 @@ public class TareaDAO {
         return tarea;
     }
 
-
-    public Collection buscarTodos()
-            throws ExcepcionInfraestructura {
+/**
+ * Busca todas las tareas
+ * @return Collection con todas las tareas
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public Collection buscarTodos() throws ExcepcionInfraestructura
+    {
 
         Collection tareas;
 
@@ -79,10 +93,14 @@ public class TareaDAO {
         return tareas;
     }
 
-
-    public Collection buscarPorEjemplo(Tarea tarea)
-            throws ExcepcionInfraestructura {
-
+/**
+ * Busca una tarea
+ * @param  Tarea                    tarea         Tarea a buscar
+ * @return                          Collection con la tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public Collection buscarPorEjemplo(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         Collection tareaa;
 
@@ -103,9 +121,80 @@ public class TareaDAO {
         return tareaa;
     }
 
+/**
+ * Busca una tarea
+ * @param  String                   tarea         nombre de la tarea a buscar
+ * @return                          Collection con la tarea encontrada
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public Collection buscarTarea( String tarea ) throws ExcepcionInfraestructura
+    {
+        if (log.isDebugEnabled()) {
+          log.debug("> existeRol(nombreRol)");
+        }
 
-    public void hazPersistente(Tarea tarea)
-            throws ExcepcionInfraestructura {
+        try {
+          String sql = "from Tareas where TareaNombre like '"+ tarea +"'";
+
+          if (log.isDebugEnabled()) {
+            log.debug(sql + tarea);
+          }
+
+          Query query = HibernateUtil.getSession().createQuery(sql);
+
+          if (log.isDebugEnabled()) {
+            log.debug("!!!!!Create query is ok");
+          }
+
+          if (log.isDebugEnabled()) {
+            log.debug("!!!!set Parameter ok antes del query list!!!!");
+          }
+
+          return query.list();
+        }catch (HibernateException e) {
+          if (log.isDebugEnabled()) {
+            log.warn("!! HibernateException !!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          }
+          throw new ExcepcionInfraestructura(e);
+        }
+    }
+
+/**
+ * Modifica una tarea
+ * @param  Tarea                    tarea         Tarea a modificar
+ * @return                          true o false
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public boolean modificar ( Tarea tarea ) throws ExcepcionInfraestructura
+    {
+
+      boolean result = false;
+
+      if (log.isDebugEnabled()) {
+        log.debug(">modificar(tarea)");
+      }
+
+      try {
+        System.out.println(tarea.toString());
+        log.debug("Tarea a modificar >>>>>>>"+ tarea + "<<<<<<<");
+        HibernateUtil.getSession().saveOrUpdate(tarea);
+        result = true;
+      }catch (HibernateException ex) {
+        if (log.isWarnEnabled()) {
+          log.warn("<HibernateException");
+        }
+        throw new ExcepcionInfraestructura(ex);
+      }
+      return result;
+    }
+
+/**
+ * Hace persistente una Tarea
+ * @param  Tarea                    tarea         Tarea a hacer persistente
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public void hazPersistente(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">hazPersistente(tarea)");
@@ -121,9 +210,13 @@ public class TareaDAO {
         }
     }
 
-
-    public void hazTransitorio(Tarea tarea)
-            throws ExcepcionInfraestructura {
+/**
+ * Termina una sesion
+ * @param  Tarea                    tarea         Tarea a terminar sesion
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public void hazTransitorio(Tarea tarea) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">hazTransitorio(tarea)");
@@ -139,27 +232,20 @@ public class TareaDAO {
         }
     }
 
-    public boolean existeTareas(String nombreTareas)
-            throws ExcepcionInfraestructura {
+/**
+ * Comprueva si la tarea existe
+ * @param  String                   nombreTareas  Tarea a comprovar
+ * @return                          true o false
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
+    public boolean existeTareas(String nombreTareas) throws ExcepcionInfraestructura
+    {
 
         if (log.isDebugEnabled()) {
             log.debug(">existeRol(nombreRol)");
         }
 
         try {
-
-
-//            String consultaCuentaRoles =
-//            "select count(*) from Ciudad r where r.nombre=?";
-//
- //           int resultado =
- //           ((Integer) HibernateUtil.getSession()
- //                          .find(consultaCuentaRoles,
- //                                nombreRol,
- //                                StringType.INSTANCE)
- //                          .iterator()
- //                          .next()).intValue();
-// de acuerdo al nuevo formato
 
             String hql = "select TareaNombre from Tarea where TareaNombre = :nombreTareas";
 

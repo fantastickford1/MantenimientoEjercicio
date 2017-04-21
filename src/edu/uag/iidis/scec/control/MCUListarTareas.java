@@ -19,13 +19,26 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.MappingDispatchAction;
 
 
-
+/**
+ * Esta clase lista las tareas usando el ManejadorTareas, FormaListadoTareas
+ * y el modelo Tarea
+ * @author Karlos
+ * @version 1.0
+ */
 public final class MCUListarTareas
         extends MappingDispatchAction {
 
     private Log log = LogFactory.getLog(MCURegistrarUsuario.class);
 
-
+/**
+* Lista dotas las Tareas haciendo uso del metodo listarTareas del manejador
+* @param  ActionMapping       mapping       Informacion del mapeo de accion
+* @param  ActionForm          form          Datos mandados por la vista
+* @param  HttpServletRequest  request       Provee información requerida por HTTP servlets
+* @param  HttpServletResponse response      Servlet que se encarga de enviar una respuesta
+* @return  ActionForward      exito o fracaso
+* @throws Exception           Error en la transaccion
+ */
     public ActionForward solicitarListarTareas(
                 ActionMapping mapping,
                 ActionForm form,

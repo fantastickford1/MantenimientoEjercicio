@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd" 
- version="2.5"> 
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
+ version="2.5">
 
-    <!-- Descripción general de la aplicación web -->
+    <!-- Descripciï¿½n general de la aplicaciï¿½n web -->
     <display-name>Prototipo SCEC 2013</display-name>
     <description>
-        SCEC - Sistema de Correo Electrónico Centralizado
+        SCEC - Sistema de Correo Electrï¿½nico Centralizado
     </description>
 
     <context-param>
@@ -16,13 +16,13 @@
         <param-value>edu.uag.iidis.scec.vista.scecRB</param-value>
     </context-param>
 
-    <!-- Configuración del Filtro  -->
+    <!-- Configuraciï¿½n del Filtro  -->
 
 
 <filter>
     <filter-name>userAccessFilter</filter-name>
-    <filter-class> 
-        edu.uag.iidis.scec.filter.AuthorizationFilter 
+    <filter-class>
+        edu.uag.iidis.scec.filter.AuthorizationFilter
     </filter-class>
     <init-param>
       <param-name>roles</param-name>
@@ -39,9 +39,9 @@
     <url-pattern>*.do</url-pattern>
   </filter-mapping>
 
- 
-  
-    <!-- Configuración de Struts -->
+
+
+    <!-- Configuraciï¿½n de Struts -->
 
 
 <!-- Action Servlet Mapping    -->
@@ -70,7 +70,7 @@
         <url-pattern>/servicios.dd</url-pattern>
     </servlet-mapping>
 
-  
+
 
     <!-- Action Servlet Mapping  -->
 
@@ -89,16 +89,16 @@
         <servlet-name>action2</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
-  
-  
- 
-  
+
+
+
+
     <welcome-file-list>
         <welcome-file>irInicio.do</welcome-file>
     </welcome-file-list>
 
 
-    <!-- Struts Tag Library Descriptors  comentar para tomcat 7     
+    <!-- Struts Tag Library Descriptors  comentar para tomcat 7
     <taglib>
         <taglib-uri>/tags/struts-bean</taglib-uri>
         <taglib-location>/WEB-INF/vista/etiquetas/struts-bean.tld</taglib-location>
@@ -115,7 +115,7 @@
         <taglib-uri>/tags/struts-nested</taglib-uri>
         <taglib-location>/WEB-INF/vista/etiquetas/struts-nested.tld</taglib-location>
     </taglib>-->
-    
+
 
 
 <!--

@@ -15,7 +15,12 @@ import org.apache.commons.logging.LogFactory;
 import java.util.Collection;
 import java.util.List;
 
-
+/**
+ * Esta clase contiene lo necesario para la persistencia de los datos
+ * el cual tiene acceso directo a Hibernate
+ * @author Diana
+ * @version 1.0
+ */
 public class SugerenciaDAO {
 
     private Log log = LogFactory.getLog(SugerenciaDAO.class);
@@ -23,7 +28,13 @@ public class SugerenciaDAO {
     public SugerenciaDAO() {
     }
 
-
+/**
+ * Busca por ID las sugerencias
+ * @param  Long                     idSugerencia  id de la sugerencia
+ * @param  boolean                  bloquear      puede ser verdadero o falso
+ * @return                          Hotel buscado
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Sugerencia buscarPorId(Long idSugerencia, boolean bloquear)
             throws ExcepcionInfraestructura {
 
@@ -54,7 +65,11 @@ public class SugerenciaDAO {
         return sugerencia;
     }
 
-
+/**
+ * Buca todas las sugerencias
+ * @return Collection con todas las sugerencias
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscarTodos()
             throws ExcepcionInfraestructura {
 
@@ -79,7 +94,12 @@ public class SugerenciaDAO {
         return sugerencias;
     }
 
-
+/**
+ * Busca una sugerencia
+ * @param  Sugerencia               sugerencia    Sugerencia a buscar
+ * @return                          Collection de todas las sugerencias
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscarPorEjemplo(Sugerencia sugerencia)
             throws ExcepcionInfraestructura {
 
@@ -103,7 +123,11 @@ public class SugerenciaDAO {
         return sugerenciass;
     }
 
-
+/**
+ * Metodo que hace persistente un objeto de tipo sugerencia
+ * @param  Sugerencia               sugerencia    Sugerencia a convertir
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public void hazPersistente(Sugerencia sugerencia)
             throws ExcepcionInfraestructura {
 
@@ -121,7 +145,11 @@ public class SugerenciaDAO {
         }
     }
 
-
+/**
+ * Termina una sesion
+ * @param  Sugerencia               sugerencia    Sugerencia a terminar sesion
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public void hazTransitorio(Sugerencia sugerencia)
             throws ExcepcionInfraestructura {
 
@@ -139,6 +167,12 @@ public class SugerenciaDAO {
         }
     }
 
+/**
+ * Verifica si la sugerencia existe en la base de datos
+ * @param  String                   nombreSugerencia nombre de la sugerencia a verificar
+ * @return                          true o false
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public boolean existeSugerencia(String nombreSugerencia)
             throws ExcepcionInfraestructura {
 
@@ -195,7 +229,12 @@ public class SugerenciaDAO {
             throw new ExcepcionInfraestructura(ex);
         }
     }
-
+/**
+ * Busca una Sugerencia
+ * @param  String                   nombreSugerencia sugerencia a buscar
+ * @return                          retorna la sugerencia
+ * @throws ExcepcionInfraestructura Error lanzado si ocurre algun problema en la transaccion
+ */
     public Collection buscaSugerencia(String nombreSugerencia)
               throws ExcepcionInfraestructura {
 

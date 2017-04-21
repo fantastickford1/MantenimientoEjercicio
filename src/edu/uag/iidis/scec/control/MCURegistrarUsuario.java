@@ -97,7 +97,9 @@ public final class MCURegistrarUsuario
                                                         forma.getApellidoPaterno(),
                                                         forma.getApellidoMaterno(),
                                                         forma.getPosfijo(),
-                                                        forma.getIniciales());
+                                                        forma.getIniciales(),
+                                                        forma.getlat(),
+                                                        forma.getlng());
 
         Credencial credencial = new Credencial (forma.getNombreUsuario(),
                                                 forma.getClaveAcceso());
