@@ -15,7 +15,7 @@ text-decoration:underline;
 </style>
 
 <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid square-login-sugerencia">
-  <h3 >Lista de Información de Integrantes</h3>
+  <h3 >Lista de Informacion de Integrantes</h3>
 
   <table class="mdl-data-table mdl-js-data-table">
 
@@ -33,10 +33,35 @@ text-decoration:underline;
         </tr>
       </thead>
       <tbody>
-        <c:forEach var="usuario" items="${formaListarUsuarios.usuario}">
+        <c:forEach var="usuario" items="${formaListadoUsuarios.usuario}">
         <tr>
           <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.id}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.nombre.prefijo}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
             <c:out value="${usuario.nombre.nombre}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.nombre.apellidoPaterno}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.nombre.apellidoMaterno}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.nombre.posfijo}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.nombre.iniciales}"/>
+          </td>
+
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.credencial.nombreUsuario}"/>
+          </td>
+          <td class="mdl-data-table__cell--non-numeric">
+            <c:out value="${usuario.credencial.claveAcceso}"/>
           </td>
 
         </tr>
