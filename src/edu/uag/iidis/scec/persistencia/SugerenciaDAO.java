@@ -177,23 +177,10 @@ public class SugerenciaDAO {
             throws ExcepcionInfraestructura {
 
         if (log.isDebugEnabled()) {
-            log.debug(">existeRol(nombreRol)");
+            log.debug(">existeSugerencia("+ nombreSugerencia +")");
         }
 
         try {
-
-
-//            String consultaCuentaRoles =
-//            "select count(*) from Ciudad r where r.nombre=?";
-//
- //           int resultado =
- //           ((Integer) HibernateUtil.getSession()
- //                          .find(consultaCuentaRoles,
- //                                nombreRol,
- //                                StringType.INSTANCE)
- //                          .iterator()
- //                          .next()).intValue();
-// de acuerdo al nuevo formato
 
             String hql = "select nombre from sugerencias where nombre = :nombre";
 

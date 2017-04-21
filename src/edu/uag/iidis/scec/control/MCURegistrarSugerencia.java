@@ -96,8 +96,10 @@ public final class MCURegistrarSugerencia extends MappingDispatchAction{
      }
 
      FormaNuevoSugerencia forma = (FormaNuevoSugerencia)form;
+     System.out.println("!!!!!!!!!fomra>>>>>>>>> " + forma.getNombre() +"<<>>"+forma.getSugerencia());
      Sugerencia sugerencia = new Sugerencia(forma.getNombre(),forma.getSugerencia());
      ManejadorSugerencias mr = new ManejadorSugerencias();
+     System.out.println("!!!!!!!>>>>>>>>> " + sugerencia);
      int resultado = mr.crearSugerencia(sugerencia);
      ActionMessages errores = new ActionMessages();
      switch (resultado) {

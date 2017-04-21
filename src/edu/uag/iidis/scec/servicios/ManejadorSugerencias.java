@@ -110,18 +110,19 @@ public class ManejadorSugerencias {
         int resultado;
 
         if (log.isDebugEnabled()) {
-            log.debug(">guardarSugerencia(sugerencia)");
+            log.debug(">guardarSugerencia(sugerencia = "+ sugerencia +")");
         }
 
         try {
             HibernateUtil.beginTransaction();
-
+            System.out.println("Existe la sugerencia????>>>> " + dao.existeSugerencia(sugerencia.getNombre()));
             if (dao.existeSugerencia(sugerencia.getNombre())) {
+              System.out.println("!!!!!!!If existe<<<<<<<<>>>>>>>>>");
                resultado = 1; // Excepción. El nombre de ciudad ya existe
             } else {
-
+              System.out.println("Hacer persistente>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                dao.hazPersistente(sugerencia);
-
+              System.out.println("Se hizo persistente>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                resultado = 0; // Exito. El ciudad se creo satisfactoriamente.
             }
 

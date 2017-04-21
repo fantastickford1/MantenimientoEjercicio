@@ -8,12 +8,12 @@
       <div><html:errors /></div>
       <!-- Input Name -->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="name" value="${formaNuevoSugerencia.nombre}">
+        <input class="mdl-textfield__input" type="text" id="name" value="${formaNuevoSugerencia.nombre}" name="nombre">
         <label class="mdl-textfield__label" for="name">Name</label>
       </div>
         <!-- Input Sugerencia -->
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="suge" value="${formaNuevoSugerencia.sugerencia}">
+        <input class="mdl-textfield__input" type="text" id="suge" value="${formaNuevoSugerencia.sugerencia}" name="sugerencia">
         <label class="mdl-textfield__label" for="suge">Sugerencia</label>
       </div>
       <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
