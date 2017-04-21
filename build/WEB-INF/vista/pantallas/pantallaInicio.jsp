@@ -20,8 +20,8 @@
 				<div class="mdl-layout__drawer show-drawer mdl-color--blue-grey-800" id="nav_bar">
 					<c:import url="/WEB-INF/vista/comun/barraMenu01.jsp" />
 				</div>
-				<main class="mdl-layout__content main_grid">
-					<div class="mdl-grid" align="center" valign="center" width="100%">
+				<main class="main_grid">
+					<div class="mdl-color--white mdl-shadow--2dp" align="center">
 						<h3>Welcome </h3>
 					</div>
 				</main>
