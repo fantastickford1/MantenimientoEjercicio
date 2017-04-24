@@ -275,6 +275,7 @@
                 name="formaNuevaTarea"
                 scope="request"
                 validate="false">
+              <input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=FormaNuevaTarea.jsp">
               <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp"/>
               <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>

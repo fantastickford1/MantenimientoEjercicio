@@ -69,8 +69,8 @@ public final class MCURegistraTarea
                           forma.getEstado(),
                           forma.getUsuario());
 
-        ManejadorPaises mr = new ManejadorPaises();
-        int resultado = mr.crearPais(pais);
+        ManejadorTareas mr = new crearTarea();
+        int resultado = mr.crearTarea(tarea);
 
         ActionMessages errores = new ActionMessages();
         switch (resultado) {
