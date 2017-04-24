@@ -23,8 +23,11 @@
         <form-bean name="formaNuevaPersona"
                    type="edu.uag.iidis.scec.vista.FormaNuevaPersona">
         </form-bean>
-        <form-bean name="formaEliminarUsuario"
-                   type="edu.uag.iidis.scec.vista.FormaEliminarUsuario">
+        <form-bean name="formaNuevaPersona"
+                   type="edu.uag.iidis.scec.vista.FormaNuevaPersona">
+        </form-bean>
+        <form-bean name="formaNuevaTarea"
+                   type="edu.uag.iidis.scec.vista.FormaNuevaTarea">
         </form-bean>
 
         <form-bean name="formaListarUsuario"
@@ -214,7 +217,11 @@
 
 
 <!-- no mames no mames no mames-->
+<!---Hugo--->
 
+
+
+<!---->
 
 
         <action path="/solicitarListarPaises"
@@ -254,6 +261,17 @@
                 input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp">
             <forward name="exito" path="/solicitarListarTareas.do"/>
         </action>
+        <!---Agregar tarea-->
+        <action path="/solicitarRegistroTareas"
+                type="edu.uag.iidis.scec.control.MCURegistrarTarea"
+                parameter="solicitarRegistroTareas"
+                name="formaNuevaTarea"
+                scope="request"
+                validate="false">
+              <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp"/>
+              <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
+        <!----->
 		<action path="/solicitarListarEstados"
                 type="edu.uag.iidis.scec.control.MCUListarEstados"
                 parameter="solicitarListarEstados"
