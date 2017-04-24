@@ -219,11 +219,7 @@
 <!-- no mames no mames no mames-->
 <!---Hugo--->
 
-
-
 <!---->
-
-
         <action path="/solicitarListarPaises"
                 type="edu.uag.iidis.scec.control.MCUListarPaises"
                 parameter="solicitarListarPaises"
@@ -265,6 +261,17 @@
         <action path="/solicitarRegistroTareas"
                 type="edu.uag.iidis.scec.control.MCURegistrarTarea"
                 parameter="solicitarRegistroTareas"
+                name="formaNuevaTarea"
+                scope="request"
+                validate="false">
+              <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp"/>
+              <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
+        <!----->
+        <!---procesar  tarea-->
+        <action path="/procesarRegistroTareas"
+                type="edu.uag.iidis.scec.control.MCURegistrarTarea"
+                parameter="procesarRegistroTareas"
                 name="formaNuevaTarea"
                 scope="request"
                 validate="false">
