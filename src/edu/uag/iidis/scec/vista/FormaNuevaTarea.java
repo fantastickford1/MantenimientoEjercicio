@@ -13,7 +13,7 @@ import org.apache.struts.validator.ValidatorForm;
  *
  * @author Victor Ramos
  */
-public final class FormaNuevoPais
+public final class FormaNuevaTarea
         extends ValidatorForm {
 
     private String nombre;

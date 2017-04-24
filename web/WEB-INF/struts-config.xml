@@ -217,9 +217,7 @@
 
 
 <!-- no mames no mames no mames-->
-<!---Hugo--->
-
-<!---->
+<!--Hugo-->
         <action path="/solicitarListarPaises"
                 type="edu.uag.iidis.scec.control.MCUListarPaises"
                 parameter="solicitarListarPaises"
@@ -257,9 +255,9 @@
                 input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaEditarTareas.jsp">
             <forward name="exito" path="/solicitarListarTareas.do"/>
         </action>
-        <!---Agregar tarea-->
+        <!--Agregar tarea-->
         <action path="/solicitarRegistroTareas"
-                type="edu.uag.iidis.scec.control.MCURegistrarTarea"
+                type="edu.uag.iidis.scec.control.MCURegistraTarea"
                 parameter="solicitarRegistroTareas"
                 name="formaNuevaTarea"
                 scope="request"
@@ -267,19 +265,17 @@
               <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp"/>
               <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
-        <!----->
-        <!---procesar  tarea-->
+        <!--procesar  tarea-->
         <action path="/procesarRegistroTareas"
-                type="edu.uag.iidis.scec.control.MCURegistrarTarea"
+                type="edu.uag.iidis.scec.control.MCURegistraTarea"
                 parameter="procesarRegistroTareas"
                 name="formaNuevaTarea"
                 scope="request"
-                validate="false">
-              <input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=FormaNuevaTarea.jsp">
-              <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp"/>
+                validate="false"
+                input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevaTarea.jsp">
+              <forward name="exito" path="/solicitarRegistroTareas.do"/>
               <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
-        <!----->
 		<action path="/solicitarListarEstados"
                 type="edu.uag.iidis.scec.control.MCUListarEstados"
                 parameter="solicitarListarEstados"
@@ -327,7 +323,6 @@
           input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoSugerencia.jsp">
         <forward name="exito" path="/solicitarListarSugerencias.do" redirect="true"/>
   </action>
-  <!--  -->
         <action path="/solicitarRegistroPais"
                 type="edu.uag.iidis.scec.control.MCURegistrarPais"
                 parameter="solicitarRegistroPais"

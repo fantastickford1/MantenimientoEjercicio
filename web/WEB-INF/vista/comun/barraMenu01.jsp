@@ -15,7 +15,7 @@
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">people</i>
         <spam class="mdl-color-text--blue-grey-50">Reg Integrantes</spam>
       </a>
-      <a class="mdl-navigation__link" href="#">
+      <a class="mdl-navigation__link" href="solicitarRegistroTareas.do">
         <i class="material-icons mdl-color-text--blue-grey-50" role="presentation">content_paste</i>
         <spam class="mdl-color-text--blue-grey-50">Asig tareas</spam>
       </a>

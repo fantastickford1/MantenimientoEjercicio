@@ -19,22 +19,22 @@
 		<input type="text" name="nombre" value="${FormaNuevaTarea.nombre}" placeholder="Nombre de la tarea" maxlength="60" class="campo">
 		<br>
 		<br>
-		<label for="Estado" class="lab">Estado</label>
+		<label for="estado" class="lab">Estado</label>
 		<br>
 		<br>
-		<input type="text" name="nombre" value="${FormaNuevaTarea.estado}" placeholder="Estado de la tarea" maxlength="60" class="campo">
+		<input type="text" name="estado" value="${FormaNuevaTarea.estado}" placeholder="Estado de la tarea" maxlength="60" class="campo">
 		<br>
 		<br>
-		<label for="Alumno_asig" class="lab">Alumno</label>
+		<label for="usuario" class="lab">Alumno</label>
 		<br>
 		<br>
-		<input type="text" name="Alumno_asig" value="${FormaNuevaTarea.usuario}" placeholder="" maxlength="45" class="campo">
+		<input type="text" name="usuario" value="${FormaNuevaTarea.usuario}" placeholder="" maxlength="45" class="campo">
 		<br>
 		<br>
 		<label for="descripcion" class="lab">Descripcion</label>
 		<br>
 		<br>
-		<textarea name="descrip" rows="8" cols="80" readonly value="${FormaNuevaTarea.descripcion}}"></textarea>
+		<textarea name="descripcion" rows="8" cols="80" readonly value="${FormaNuevaTarea.descripcion}}"></textarea>
 		<br>
 		<br>
 		<input type="submit" name="" value="Aceptar" class="btn">

@@ -65,11 +65,11 @@ public final class MCURegistraTarea
         FormaNuevaTarea forma = (FormaNuevaTarea)form;
 
         Tarea tarea = new Tarea(forma.getNombre(),
-                          forma.getDescripcion().
+                          forma.getDescripcion(),
                           forma.getEstado(),
                           forma.getUsuario());
 
-        ManejadorTareas mr = new crearTarea();
+        ManejadorTareas mr = new ManejadorTareas();
         int resultado = mr.crearTarea(tarea);
 
         ActionMessages errores = new ActionMessages();
