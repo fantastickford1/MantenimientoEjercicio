@@ -9,15 +9,27 @@ import edu.uag.iidis.scec.modelo.Usuario;
 import edu.uag.iidis.scec.excepciones.*;
 import edu.uag.iidis.scec.persistencia.UsuarioDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
+/**
+ * Esta clase facilita las transacciones con la persistencia
+ * @author alexis
+ * @version 1.0
+ */
 
 public class ManejadorUsuarios {
     private Log log = LogFactory.getLog(ManejadorUsuarios.class);
     private UsuarioDAO dao;
 
+    /**
+     * Construcctor del manejador
+     */
     public ManejadorUsuarios() {
         dao = new UsuarioDAO();
     }
 
+    /**
+     * obtiene usuarios mediante el dao
+     * @return Collection de todas los usuarios
+     */
 
     public Usuario obtenerUsuario(String nombreUsuario)
             throws ExcepcionServicio {
@@ -34,7 +46,10 @@ public class ManejadorUsuarios {
         }
     }
 
-
+    /**
+     * obtiene todos los usuarios mediante el dao
+     * @return Collection de todas los usuario
+     */
     public Collection obtenerUsuarios(Usuario usuario) {
 
         if (log.isDebugEnabled()) {
@@ -101,23 +116,9 @@ public class ManejadorUsuarios {
     }
 
 
-/*
-    public void eliminarUsuario(String nombreUsuario) throws ExcepcionServicio {
-
-        if (log.isDebugEnabled()) {
-            log.debug(">eliminarUsuario(" + nombreUsuario + ")");
-        }
-
-        try {
-            dao.hazTransitorio(nombreUsuario);
-        } catch (ExcepcionInfraestructura e) {
-            if (log.isWarnEnabled()) {
-                log.warn("<ExcepcionInfraestructura");
-            }
-            throw new ExcepcionServicio(e.getMessage(), e);
-        }
-    }
-    */
+    /**
+     * elimina un usuario mediante el dao
+     */
     public void eliminarUsuario(Long id) {
         if (log.isDebugEnabled()) {
             log.debug(">eliminarTareas(tarea)");
