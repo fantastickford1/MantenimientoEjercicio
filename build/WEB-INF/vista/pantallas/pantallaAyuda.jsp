@@ -12,7 +12,7 @@
 			<link rel="stylesheet" type="text/css" href="css/style.css">
 	    <link rel="stylesheet" type="text/css" href="css/plantilla.css">
 			<script src="js/material.min.js"></script>
-			<script src="js/jquery-3.1.1.js"></script>
+			<script src="js/jquery-3.2.1.js"></script>
     </head>
 		<body>
 			<header class="mdl-layout__header mdl-header-edited" id="banner">
