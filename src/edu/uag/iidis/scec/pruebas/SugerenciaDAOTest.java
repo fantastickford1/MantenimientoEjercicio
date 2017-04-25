@@ -14,10 +14,19 @@ import edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil;
 
 import java.util.*;
 
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import junit.extensions.TestSetup;
+import junit.textui.TestRunner;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SugerenciaDAOTest {
 
-  @Test
+  private static SugerenciaDAO dao = null;
+
+
+
     public void testCrearSugerenciaT() throws Exception {
       SugerenciaDAO dao = new SugerenciaDAO();
          Sugerencia sugerencia = new Sugerencia("Diana","Hola");
@@ -35,7 +44,7 @@ public class SugerenciaDAOTest {
          }
     }
 
-    @Test
+    
     public void testCrearSugerenciaF() throws Exception {
       SugerenciaDAO dao = new SugerenciaDAO();
          Sugerencia sugerencia = new Sugerencia("Carlos","Hola");
@@ -54,7 +63,7 @@ public class SugerenciaDAOTest {
          }
     }
 
-    @Test
+    
 public void testBuscarTodosE() throws Exception {
 
     SugerenciaDAO dao = new SugerenciaDAO();
@@ -73,7 +82,7 @@ public void testBuscarTodosE() throws Exception {
         HibernateUtil.closeSession();
     }
 }
-@Test
+
 public void testBuscarTodosF() throws Exception {
 
     SugerenciaDAO dao = new SugerenciaDAO();
@@ -91,6 +100,32 @@ public void testBuscarTodosF() throws Exception {
     } finally{
         HibernateUtil.closeSession();
     }
+}
+
+public static Test suite() {
+
+   TestSetup suite = new TestSetup(new TestSuite(SugerenciaDAOTest.class)) {
+
+        protected void setUp(  ) throws Exception {
+            // Se ejecuta al inicio de la suite
+
+            SchemaExport ddlExport = new SchemaExport(HibernateUtil.getConfiguration());
+            ddlExport.create(false, true);
+
+            dao = new SugerenciaDAO();
+        }
+
+        protected void tearDown(  ) throws Exception {
+            // se ejecuta al final de la suite
+            dao = null;
+        }
+    };
+
+    return suite;
+}
+
+public static void main(String[] args) throws Exception {
+    TestRunner.run( suite() );
 }
 
 

@@ -14,10 +14,17 @@ import edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil;
 
 import java.util.*;
 
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import junit.extensions.TestSetup;
+import junit.textui.TestRunner;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TareaDAOTest {
 
-  @Test
+  private static TareaDAO dao = null;
+
     public void testActualizarTareaT() throws Exception {
         TareaDAO dao = new TareaDAO();
         Tarea tarea = new Tarea("Terminar Batman","Terminar Batman Arkham","Terminado","fantastickford1");
@@ -36,7 +43,6 @@ public class TareaDAOTest {
         }
     }
 
-    @Test
     public void testActualizarTareaF() throws Exception {
         //Falla porque la placa no se puede actualizar
         TareaDAO dao = new TareaDAO();
@@ -59,7 +65,6 @@ public class TareaDAOTest {
         }
     }
 
-    @Test
 public void testBuscarTodosE() throws Exception {
 
     TareaDAO dao = new TareaDAO();
@@ -78,7 +83,7 @@ public void testBuscarTodosE() throws Exception {
         HibernateUtil.closeSession();
     }
 }
-@Test
+
 public void testBuscarTodosF() throws Exception {
 
     TareaDAO dao = new TareaDAO();
@@ -96,6 +101,32 @@ public void testBuscarTodosF() throws Exception {
     } finally{
         HibernateUtil.closeSession();
     }
+}
+
+public static Test suite() {
+
+   TestSetup suite = new TestSetup(new TestSuite(TareaDAOTest.class)) {
+
+        protected void setUp(  ) throws Exception {
+            // Se ejecuta al inicio de la suite
+
+            SchemaExport ddlExport = new SchemaExport(HibernateUtil.getConfiguration());
+            ddlExport.create(false, true);
+
+            dao = new TareaDAO();
+        }
+
+        protected void tearDown(  ) throws Exception {
+            // se ejecuta al final de la suite
+            dao = null;
+        }
+    };
+
+    return suite;
+}
+
+public static void main(String[] args) throws Exception {
+    TestRunner.run( suite() );
 }
 
 
