@@ -82,4 +82,59 @@ public final class MCUListarTareas
         }
 
     }
+
+    public ActionForward ordenarPor(
+                ActionMapping mapping,
+                ActionForm form,
+                HttpServletRequest request,
+                HttpServletResponse response)
+            throws Exception {
+
+        if (log.isDebugEnabled()) {
+            log.debug(">solicitarListarTareas");
+        }
+
+        // Verifica si la acciÃ³n fue cancelada por el usuario
+        if (isCancelled(request)) {
+            if (log.isDebugEnabled()) {
+                log.debug("<La acciÃ³n fue cancelada");
+            }
+            return (mapping.findForward("cancelar"));
+        }
+
+        //Obtenemos los datos que fueron enviados por data de AJAX
+        FormaListadoTareas forma = (FormaListadoTareas)form;
+
+        ManejadorTareas mr = new ManejadorTareas();
+        if (log.isDebugEnabled()) {
+                log.debug(forma.getNombre());
+            }
+        //Buscamos elementos por nombre
+        Collection resultado = mr.ordenarPor(forma.getNombre());//Utilizamos
+                            //Campo de nombre para evitar más modiicaciones
+
+        ActionMessages errores = new ActionMessages();
+        if (resultado != null) {
+            if ( resultado.isEmpty() ) {
+                if (log.isDebugEnabled()) {
+                    log.debug(resultado.toString());
+                }
+                errores.add(ActionMessages.GLOBAL_MESSAGE,
+                    new ActionMessage("errors.registroVacio"));
+                saveErrors(request, errores);
+            } else {
+                forma.setTareas(resultado);
+            }
+            return (mapping.findForward("exito"));
+        } else {
+            log.error("OcurriÃ³ un error de infraestructura");
+            errores.add(ActionMessages.GLOBAL_MESSAGE,
+                        new ActionMessage("errors.infraestructura"));
+            saveErrors(request, errores);
+            return ( mapping.findForward("fracaso") );
+        }
+
+    }
+
+
 }

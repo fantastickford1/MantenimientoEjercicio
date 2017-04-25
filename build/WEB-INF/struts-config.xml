@@ -236,6 +236,15 @@
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoTareas.jsp"/>
         </action>
+        <action path="/ordenarListaPor"
+                type="edu.uag.iidis.scec.control.MCUListarTareas"
+                parameter="ordenarPor"
+                name="formaListadoTareas"
+                scope="request"
+                validate="false">
+              <forward name="exito" path="/WEB-INF/vista/pantallas/listaOrdenada.jsp"/>
+              <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
         <!-- Modificar Tarea -->
         <action path="/solicitarModificarTarea"
                 type="edu.uag.iidis.scec.control.MCUModificarTarea"

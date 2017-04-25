@@ -170,4 +170,24 @@ public class ManejadorTareas {
         }
         return resultado;
     }
+
+    public Collection ordenarPor(String parametro) {
+        Collection resultado;
+
+        if (log.isDebugEnabled()) {
+            log.debug(">ordenarPor(nombre)");
+        }
+
+        try {
+            HibernateUtil.beginTransaction();
+            resultado = dao.ordenarPor(parametro);
+            HibernateUtil.commitTransaction();
+            return resultado;
+        } catch (ExcepcionInfraestructura e) {
+            HibernateUtil.rollbackTransaction();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
 }

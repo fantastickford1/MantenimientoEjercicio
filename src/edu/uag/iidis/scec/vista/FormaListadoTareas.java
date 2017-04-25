@@ -19,6 +19,10 @@ public final class FormaListadoTareas
 
     private Collection tareas;
     private int contador;
+    private String nombre;
+    private String descripcion;
+    private String estado;
+    private String usuario;
 
 /**
  * establece las tareas en la Collection
@@ -46,6 +50,70 @@ public final class FormaListadoTareas
     public int getContador() {
         return (this.contador);
     }
+
+    /**
+  	* Returns value of nombre
+  	* @return
+  	*/
+  	public String getNombre() {
+  		return nombre;
+  	}
+
+  	/**
+  	* Sets new value of nombre
+  	* @param
+  	*/
+  	public void setNombre(String nombre) {
+  		this.nombre = nombre;
+  	}
+
+  	/**
+  	* Returns value of descripcion
+  	* @return
+  	*/
+  	public String getDescripcion() {
+  		return descripcion;
+  	}
+
+  	/**
+  	* Sets new value of descripcion
+  	* @param
+  	*/
+  	public void setDescripcion(String descripcion) {
+  		this.descripcion = descripcion;
+  	}
+
+  	/**
+  	* Returns value of estado
+  	* @return
+  	*/
+  	public String getEstado() {
+  		return estado;
+  	}
+
+  	/**
+  	* Sets new value of estado
+  	* @param
+  	*/
+  	public void setEstado(String estado) {
+  		this.estado = estado;
+  	}
+
+  	/**
+  	* Returns value of usuario
+  	* @return
+  	*/
+  	public String getUsuario() {
+  		return usuario;
+  	}
+
+  	/**
+  	* Sets new value of usuario
+  	* @param
+  	*/
+  	public void setUsuario(String usuario) {
+  		this.usuario = usuario;
+  	}
 
 /**
  * Elimina todos los hoteles
