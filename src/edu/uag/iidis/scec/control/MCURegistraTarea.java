@@ -40,7 +40,10 @@ public final class MCURegistraTarea
     }
 
 
-
+    /**
+    * Este metodo se procesar el registro de tareas
+    * @param
+    */
     public ActionForward procesarRegistroTareas(
                 ActionMapping mapping,
                 ActionForm form,
@@ -52,7 +55,10 @@ public final class MCURegistraTarea
             log.debug(">procesarRegistroTareas");
         }
 
-        // Verifica si la acción fue cancelada por el usuario
+        /**
+        * se verifica si la accion fue cancelada por el usuario
+        * @param
+        */
         if (isCancelled(request)) {
             if (log.isDebugEnabled()) {
                 log.debug("<La acción fue cancelada");
@@ -61,7 +67,10 @@ public final class MCURegistraTarea
         }
 
 
-        // Se obtienen los datos para procesar el registro
+        /**
+        * Se obtienen los datos para procesar el registro
+        * @param
+        */
         FormaNuevaTarea forma = (FormaNuevaTarea)form;
 
         Tarea tarea = new Tarea(forma.getNombre(),
