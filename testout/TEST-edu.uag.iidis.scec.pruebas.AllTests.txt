@@ -1,224 +1,224 @@
 Testsuite: edu.uag.iidis.scec.pruebas.AllTests
-Tests run: 11, Failures: 2, Errors: 8, Skipped: 0, Time elapsed: 3.35 sec
+Tests run: 11, Failures: 2, Errors: 8, Skipped: 0, Time elapsed: 3.413 sec
 ------------- Standard Output ---------------
-[SCEC] 2017-04-25 12:26:01,006 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.<clinit>(69) : >creando sessionFactory
-[SCEC] 2017-04-25 12:26:03,415 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
-[SCEC] 2017-04-25 12:26:03,416 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,419 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
-[SCEC] 2017-04-25 12:26:03,419 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,424 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,425 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,427 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,428 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
-[SCEC] 2017-04-25 12:26:03,430 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,431 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,432 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,433 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
-[SCEC] 2017-04-25 12:26:03,435 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,435 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,437 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,442 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
-[SCEC] 2017-04-25 12:26:03,443 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,444 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
-[SCEC] 2017-04-25 12:26:03,446 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,447 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
-[SCEC] 2017-04-25 12:26:03,448 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,448 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,450 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
-[SCEC] 2017-04-25 12:26:03,450 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,451 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
-[SCEC] 2017-04-25 12:26:03,452 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,458 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
-[SCEC] 2017-04-25 12:26:03,459 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
-[SCEC] 2017-04-25 12:26:03,459 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,460 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
-[SCEC] 2017-04-25 12:26:03,535 DEBUG edu.uag.iidis.scec.persistencia.RolDAO.hazPersistente(109) : >hazPersistente(rol)
-[SCEC] 2017-04-25 12:26:03,536 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:11,895 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.<clinit>(69) : >creando sessionFactory
+[SCEC] 2017-04-25 12:40:14,367 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
+[SCEC] 2017-04-25 12:40:14,368 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,369 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
+[SCEC] 2017-04-25 12:40:14,370 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,373 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,374 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,375 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,376 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
+[SCEC] 2017-04-25 12:40:14,377 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,378 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,379 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,379 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
+[SCEC] 2017-04-25 12:40:14,380 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,381 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,382 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,385 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
+[SCEC] 2017-04-25 12:40:14,386 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,387 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
+[SCEC] 2017-04-25 12:40:14,388 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,389 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
+[SCEC] 2017-04-25 12:40:14,390 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,390 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,391 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
+[SCEC] 2017-04-25 12:40:14,392 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,393 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
+[SCEC] 2017-04-25 12:40:14,393 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,400 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-25 12:40:14,401 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-25 12:40:14,402 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,403 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,480 DEBUG edu.uag.iidis.scec.persistencia.RolDAO.hazPersistente(109) : >hazPersistente(rol)
+[SCEC] 2017-04-25 12:40:14,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
 Hibernate: select max(idRol) from Roles
-[SCEC] 2017-04-25 12:26:03,727  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,728 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Roles' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,730  WARN edu.uag.iidis.scec.persistencia.RolDAO.hazPersistente(116) : <HibernateException
-[SCEC] 2017-04-25 12:26:03,731 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
-[SCEC] 2017-04-25 12:26:03,732 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
-[SCEC] 2017-04-25 12:26:03,734 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
-[SCEC] 2017-04-25 12:26:03,735 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,735 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,739 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,784 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
-[SCEC] 2017-04-25 12:26:03,785 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,787 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
-[SCEC] 2017-04-25 12:26:03,787 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,792 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,793 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,794 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,795 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
-[SCEC] 2017-04-25 12:26:03,797 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,797 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,799 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,800 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
-[SCEC] 2017-04-25 12:26:03,801 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,802 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,804 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,805 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
-[SCEC] 2017-04-25 12:26:03,806 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,807 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
-[SCEC] 2017-04-25 12:26:03,809 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,809 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
-[SCEC] 2017-04-25 12:26:03,811 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
-[SCEC] 2017-04-25 12:26:03,811 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:03,813 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
-[SCEC] 2017-04-25 12:26:03,814 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,815 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
-[SCEC] 2017-04-25 12:26:03,816 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,819 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
-[SCEC] 2017-04-25 12:26:03,820 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
-[SCEC] 2017-04-25 12:26:03,821 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,821 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
-[SCEC] 2017-04-25 12:26:03,822 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(188) : >hazPersistente(usuario)
-[SCEC] 2017-04-25 12:26:03,823 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,664  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,665 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Roles' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,668  WARN edu.uag.iidis.scec.persistencia.RolDAO.hazPersistente(116) : <HibernateException
+[SCEC] 2017-04-25 12:40:14,669 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
+[SCEC] 2017-04-25 12:40:14,670 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
+[SCEC] 2017-04-25 12:40:14,673 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
+[SCEC] 2017-04-25 12:40:14,674 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,675 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,680 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,733 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
+[SCEC] 2017-04-25 12:40:14,734 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,736 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
+[SCEC] 2017-04-25 12:40:14,736 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,741 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,742 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,743 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,744 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
+[SCEC] 2017-04-25 12:40:14,746 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,746 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,748 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,749 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
+[SCEC] 2017-04-25 12:40:14,750 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,751 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,753 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,753 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
+[SCEC] 2017-04-25 12:40:14,755 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,756 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
+[SCEC] 2017-04-25 12:40:14,757 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,758 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
+[SCEC] 2017-04-25 12:40:14,760 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,760 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,762 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
+[SCEC] 2017-04-25 12:40:14,763 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,765 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
+[SCEC] 2017-04-25 12:40:14,765 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,768 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-25 12:40:14,769 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-25 12:40:14,770 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,770 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,771 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(188) : >hazPersistente(usuario)
+[SCEC] 2017-04-25 12:40:14,772 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
 Hibernate: select max(idUsuario) from Usuarios
-[SCEC] 2017-04-25 12:26:03,825  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,826 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,827  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(198) : <HibernateException
-[SCEC] 2017-04-25 12:26:03,828 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
-[SCEC] 2017-04-25 12:26:03,828 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
-[SCEC] 2017-04-25 12:26:03,829 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
-[SCEC] 2017-04-25 12:26:03,830 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,830 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,831 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,833 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
-[SCEC] 2017-04-25 12:26:03,834 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,834 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,774  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,775 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,776  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(198) : <HibernateException
+[SCEC] 2017-04-25 12:40:14,777 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
+[SCEC] 2017-04-25 12:40:14,777 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
+[SCEC] 2017-04-25 12:40:14,778 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
+[SCEC] 2017-04-25 12:40:14,779 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,779 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,780 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,783 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-25 12:40:14,784 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,784 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
 Hibernate: select usuario0_.idUsuario as idUsuario1_0_, usuario0_.nombrePrefijo as nombrePr2_1_0_, usuario0_.nombreNombre as nombreNo3_1_0_, usuario0_.nombreApellidoPaterno as nombreAp4_1_0_, usuario0_.nombreApellidoMaterno as nombreAp5_1_0_, usuario0_.nombrePosfijo as nombrePo6_1_0_, usuario0_.nombreIniciales as nombreIn7_1_0_, usuario0_.lng as lng1_0_, usuario0_.lat as lat1_0_, usuario0_.nombreUsuario as nombreU10_1_0_, usuario0_.claveAcceso as claveAc11_1_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
-[SCEC] 2017-04-25 12:26:03,854  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,854 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,855 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,855 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,862 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
-[SCEC] 2017-04-25 12:26:03,863 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
-[SCEC] 2017-04-25 12:26:03,863 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,864 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
-[SCEC] 2017-04-25 12:26:03,864 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(188) : >hazPersistente(usuario)
-[SCEC] 2017-04-25 12:26:03,865 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,811  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,811 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,812 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,812 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,817 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-25 12:40:14,818 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-25 12:40:14,818 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,818 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,819 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(188) : >hazPersistente(usuario)
+[SCEC] 2017-04-25 12:40:14,819 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
 Hibernate: select max(idUsuario) from Usuarios
-[SCEC] 2017-04-25 12:26:03,867  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,868 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,869  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(198) : <HibernateException
-[SCEC] 2017-04-25 12:26:03,869 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
-[SCEC] 2017-04-25 12:26:03,870 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
-[SCEC] 2017-04-25 12:26:03,871 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
-[SCEC] 2017-04-25 12:26:03,871 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,872 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,872 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,877 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
-[SCEC] 2017-04-25 12:26:03,878 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
-[SCEC] 2017-04-25 12:26:03,879 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,879 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
-[SCEC] 2017-04-25 12:26:03,880 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
-[SCEC] 2017-04-25 12:26:03,881 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,821  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,821 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,822  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(198) : <HibernateException
+[SCEC] 2017-04-25 12:40:14,822 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
+[SCEC] 2017-04-25 12:40:14,823 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
+[SCEC] 2017-04-25 12:40:14,823 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
+[SCEC] 2017-04-25 12:40:14,824 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,824 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,825 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,829 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-25 12:40:14,829 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-25 12:40:14,829 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,830 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,830 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-25 12:40:14,831 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
 Hibernate: select usuario0_.idUsuario as idUsuario1_0_, usuario0_.nombrePrefijo as nombrePr2_1_0_, usuario0_.nombreNombre as nombreNo3_1_0_, usuario0_.nombreApellidoPaterno as nombreAp4_1_0_, usuario0_.nombreApellidoMaterno as nombreAp5_1_0_, usuario0_.nombrePosfijo as nombrePo6_1_0_, usuario0_.nombreIniciales as nombreIn7_1_0_, usuario0_.lng as lng1_0_, usuario0_.lat as lat1_0_, usuario0_.nombreUsuario as nombreU10_1_0_, usuario0_.claveAcceso as claveAc11_1_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
-[SCEC] 2017-04-25 12:26:03,885  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,886 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,886 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
-[SCEC] 2017-04-25 12:26:03,887 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
-[SCEC] 2017-04-25 12:26:03,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
-[SCEC] 2017-04-25 12:26:03,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,889 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,890 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,896 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
-[SCEC] 2017-04-25 12:26:03,897 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,898 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,834  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,834 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,835 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(287) : >rollbackTransaction()
+[SCEC] 2017-04-25 12:40:14,835 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(295) : -Intentando deshacer la transacción para este thread.
+[SCEC] 2017-04-25 12:40:14,836 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.rollbackTransaction(304) : -Intentando cerrar la sesión.
+[SCEC] 2017-04-25 12:40:14,836 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,837 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,837 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,842 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-25 12:40:14,843 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,843 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
 Hibernate: select usuario0_.idUsuario as idUsuario1_0_, usuario0_.nombrePrefijo as nombrePr2_1_0_, usuario0_.nombreNombre as nombreNo3_1_0_, usuario0_.nombreApellidoPaterno as nombreAp4_1_0_, usuario0_.nombreApellidoMaterno as nombreAp5_1_0_, usuario0_.nombrePosfijo as nombrePo6_1_0_, usuario0_.nombreIniciales as nombreIn7_1_0_, usuario0_.lng as lng1_0_, usuario0_.lat as lat1_0_, usuario0_.nombreUsuario as nombreU10_1_0_, usuario0_.claveAcceso as claveAc11_1_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
-[SCEC] 2017-04-25 12:26:03,901  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,902 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,903 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,904 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,908 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorEjemplo(124) : >buscarPorEjemplo()
-[SCEC] 2017-04-25 12:26:03,909 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,909 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,847  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,848 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,849 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,849 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,855 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorEjemplo(124) : >buscarPorEjemplo()
+[SCEC] 2017-04-25 12:40:14,856 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,857 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
 Hibernate: select this_.idUsuario as idUsuario1_0_, this_.nombrePrefijo as nombrePr2_1_0_, this_.nombreNombre as nombreNo3_1_0_, this_.nombreApellidoPaterno as nombreAp4_1_0_, this_.nombreApellidoMaterno as nombreAp5_1_0_, this_.nombrePosfijo as nombrePo6_1_0_, this_.nombreIniciales as nombreIn7_1_0_, this_.lng as lng1_0_, this_.lat as lat1_0_, this_.nombreUsuario as nombreU10_1_0_, this_.claveAcceso as claveAc11_1_0_ from Usuarios this_ where (this_.nombreUsuario=?)
-[SCEC] 2017-04-25 12:26:03,945  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,946 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,947  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorEjemplo(135) : <HibernateException
-[SCEC] 2017-04-25 12:26:03,947 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,948 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,953 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarTodos(100) : >buscarTodos()
-[SCEC] 2017-04-25 12:26:03,954 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,955 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,908  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,909 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,910  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorEjemplo(135) : <HibernateException
+[SCEC] 2017-04-25 12:40:14,910 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,911 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,916 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarTodos(100) : >buscarTodos()
+[SCEC] 2017-04-25 12:40:14,917 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,917 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
 Hibernate: select this_.idUsuario as idUsuario1_0_, this_.nombrePrefijo as nombrePr2_1_0_, this_.nombreNombre as nombreNo3_1_0_, this_.nombreApellidoPaterno as nombreAp4_1_0_, this_.nombreApellidoMaterno as nombreAp5_1_0_, this_.nombrePosfijo as nombrePo6_1_0_, this_.nombreIniciales as nombreIn7_1_0_, this_.lng as lng1_0_, this_.lat as lat1_0_, this_.nombreUsuario as nombreU10_1_0_, this_.claveAcceso as claveAc11_1_0_ from Usuarios this_
-[SCEC] 2017-04-25 12:26:03,958  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,959 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,960  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarTodos(111) : <HibernateException
-[SCEC] 2017-04-25 12:26:03,960 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,961 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:03,966 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
-[SCEC] 2017-04-25 12:26:03,967 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
-[SCEC] 2017-04-25 12:26:03,968 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,968 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
-[SCEC] 2017-04-25 12:26:03,969 DEBUG edu.uag.iidis.scec.persistencia.RolDAO.buscarPorId(33) : >buscarPorID(2, false)
-[SCEC] 2017-04-25 12:26:03,970 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
-[SCEC] 2017-04-25 12:26:03,971 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
-[SCEC] 2017-04-25 12:26:03,971 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,921  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,922 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,923  WARN edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarTodos(111) : <HibernateException
+[SCEC] 2017-04-25 12:40:14,924 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,924 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,929 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-25 12:40:14,929 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-25 12:40:14,929 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,930 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-25 12:40:14,930 DEBUG edu.uag.iidis.scec.persistencia.RolDAO.buscarPorId(33) : >buscarPorID(2, false)
+[SCEC] 2017-04-25 12:40:14,931 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-25 12:40:14,931 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-25 12:40:14,932 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
 Hibernate: select usuario0_.idUsuario as idUsuario1_0_, usuario0_.nombrePrefijo as nombrePr2_1_0_, usuario0_.nombreNombre as nombreNo3_1_0_, usuario0_.nombreApellidoPaterno as nombreAp4_1_0_, usuario0_.nombreApellidoMaterno as nombreAp5_1_0_, usuario0_.nombrePosfijo as nombrePo6_1_0_, usuario0_.nombreIniciales as nombreIn7_1_0_, usuario0_.lng as lng1_0_, usuario0_.lat as lat1_0_, usuario0_.nombreUsuario as nombreU10_1_0_, usuario0_.claveAcceso as claveAc11_1_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
-[SCEC] 2017-04-25 12:26:03,974  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
-[SCEC] 2017-04-25 12:26:03,975 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
-[SCEC] 2017-04-25 12:26:03,976 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
-[SCEC] 2017-04-25 12:26:03,977 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
-[SCEC] 2017-04-25 12:26:04,007 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
-[SCEC] 2017-04-25 12:26:04,008 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,009 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
-[SCEC] 2017-04-25 12:26:04,010 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,014 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,015 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,016 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,017 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
-[SCEC] 2017-04-25 12:26:04,018 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,018 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,020 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,020 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
-[SCEC] 2017-04-25 12:26:04,021 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,022 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,023 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,024 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
-[SCEC] 2017-04-25 12:26:04,025 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,026 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
-[SCEC] 2017-04-25 12:26:04,027 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,028 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
-[SCEC] 2017-04-25 12:26:04,029 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,029 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,031 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
-[SCEC] 2017-04-25 12:26:04,031 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,033 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
-[SCEC] 2017-04-25 12:26:04,033 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,066 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
-[SCEC] 2017-04-25 12:26:04,067 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,068 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
-[SCEC] 2017-04-25 12:26:04,069 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,073 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,073 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,075 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,075 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
-[SCEC] 2017-04-25 12:26:04,077 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,077 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,079 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,079 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
-[SCEC] 2017-04-25 12:26:04,080 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,081 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,082 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,083 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
-[SCEC] 2017-04-25 12:26:04,084 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,085 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
-[SCEC] 2017-04-25 12:26:04,086 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,087 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
-[SCEC] 2017-04-25 12:26:04,088 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
-[SCEC] 2017-04-25 12:26:04,088 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
-[SCEC] 2017-04-25 12:26:04,090 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
-[SCEC] 2017-04-25 12:26:04,090 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
-[SCEC] 2017-04-25 12:26:04,092 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
-[SCEC] 2017-04-25 12:26:04,092 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,934  WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(143) : SQL Error: 1146, SQLState: 42S02
+[SCEC] 2017-04-25 12:40:14,935 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(144) : Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,936 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-25 12:40:14,937 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-25 12:40:14,972 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
+[SCEC] 2017-04-25 12:40:14,972 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,974 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
+[SCEC] 2017-04-25 12:40:14,974 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:14,981 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,982 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,984 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,985 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
+[SCEC] 2017-04-25 12:40:14,986 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,988 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,989 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,990 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
+[SCEC] 2017-04-25 12:40:14,991 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,992 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:14,993 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,994 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
+[SCEC] 2017-04-25 12:40:14,995 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,995 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
+[SCEC] 2017-04-25 12:40:14,997 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,998 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
+[SCEC] 2017-04-25 12:40:14,999 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
+[SCEC] 2017-04-25 12:40:14,999 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:15,001 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
+[SCEC] 2017-04-25 12:40:15,001 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:15,003 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
+[SCEC] 2017-04-25 12:40:15,003 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:15,040 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1C7F566F0
+[SCEC] 2017-04-25 12:40:15,041 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:15,043 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol drop foreign key FK4CA33E1BC6DE0AE
+[SCEC] 2017-04-25 12:40:15,044 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:15,048 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Estados (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,049 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:15,050 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Lugares (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), Poblacion bigint, Coordenadas varchar(255), Estado varchar(255), Imagen varchar(255), Pais varchar(255), Moneda varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,050 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 12"
+[SCEC] 2017-04-25 12:40:15,051 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Pais (id bigint not null, Nombre varchar(255) not null unique, Descripcion varchar(255), primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,051 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:15,052 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Recomendaciones (id bigint not null, Nombre varchar(255) not null, Estado varchar(255), Usuario varchar(255), Fecha varchar(255), Comentario varchar(255), Calificacion bigint, primary key (id)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,053 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 10"
+[SCEC] 2017-04-25 12:40:15,054 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Roles (idRol bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idRol)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,054 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:15,055 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Tareas (idTareas bigint not null, TareaNombre varchar(255) unique, TareaDescripcion varchar(255), TareaEstado varchar(255), nombreUsuario varchar(255), primary key (idTareas)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,055 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 8"
+[SCEC] 2017-04-25 12:40:15,056 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table UsuarioRol (idUsuario bigint not null, idRol bigint not null) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,056 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 4"
+[SCEC] 2017-04-25 12:40:15,058 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table Usuarios (idUsuario bigint not null, nombrePrefijo varchar(255), nombreNombre varchar(255), nombreApellidoPaterno varchar(255), nombreApellidoMaterno varchar(255), nombrePosfijo varchar(255), nombreIniciales varchar(255), lng float, lat float, nombreUsuario varchar(255) not null unique, claveAcceso varchar(255) not null, primary key (idUsuario)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,058 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 14"
+[SCEC] 2017-04-25 12:40:15,059 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: create table ciudades (idciudad bigint not null, nombre varchar(255) not null unique, descripcion varchar(255), primary key (idciudad)) type=InnoDB
+[SCEC] 2017-04-25 12:40:15,059 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Syntax error or access violation,  message from server: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'type=InnoDB' at line 6"
+[SCEC] 2017-04-25 12:40:15,061 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1C7F566F0 (idRol), add constraint FK4CA33E1C7F566F0 foreign key (idRol) references Roles (idRol)
+[SCEC] 2017-04-25 12:40:15,061 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
+[SCEC] 2017-04-25 12:40:15,062 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(426) : HHH000389: Unsuccessful: alter table UsuarioRol add index FK4CA33E1BC6DE0AE (idUsuario), add constraint FK4CA33E1BC6DE0AE foreign key (idUsuario) references Usuarios (idUsuario)
+[SCEC] 2017-04-25 12:40:15,063 ERROR org.hibernate.tool.hbm2ddl.SchemaExport.perform(427) : Base table or view not found,  message from server: "Table 'login.UsuarioRol' doesn't exist"
 ------------- ---------------- ---------------
 
-Testcase: testCrearRol took 0.283 sec
+Testcase: testCrearRol took 0.284 sec
 	Caused an ERROR
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Roles' doesn't exist"
 edu.uag.iidis.scec.excepciones.ExcepcionInfraestructura: org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Roles' doesn't exist"
@@ -254,7 +254,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
 Testcase: testCrearUsuarioInvalido took 0.014 sec
-Testcase: testBuscarUsuarioPorId took 0.024 sec
+Testcase: testBuscarUsuarioPorId took 0.03 sec
 	Caused an ERROR
 Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -294,7 +294,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: testCrearUsuario took 0.011 sec
+Testcase: testCrearUsuario took 0.008 sec
 	Caused an ERROR
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 edu.uag.iidis.scec.excepciones.ExcepcionInfraestructura: org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -329,7 +329,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: testAgregarRol took 0.014 sec
+Testcase: testAgregarRol took 0.01 sec
 	Caused an ERROR
 Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -369,7 +369,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: testVerificarRol took 0.009 sec
+Testcase: testVerificarRol took 0.008 sec
 	Caused an ERROR
 Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -409,7 +409,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: testBuscarPorEjemplo took 0.041 sec
+Testcase: testBuscarPorEjemplo took 0.057 sec
 	Caused an ERROR
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 edu.uag.iidis.scec.excepciones.ExcepcionInfraestructura: org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -479,7 +479,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: testEliminarRol took 0.012 sec
+Testcase: testEliminarRol took 0.009 sec
 	Caused an ERROR
 Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
 org.hibernate.exception.SQLGrammarException: Base table or view not found,  message from server: "Table 'login.Usuarios' doesn't exist"
@@ -519,7 +519,7 @@ Caused by: java.sql.SQLException: Base table or view not found,  message from se
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1555)
 	at org.hibernate.engine.jdbc.internal.proxy.AbstractStatementProxyHandler.continueInvocation(AbstractStatementProxyHandler.java:122)
 
-Testcase: warning took 0.001 sec
+Testcase: warning took 0 sec
 	FAILED
 No tests found in edu.uag.iidis.scec.pruebas.TareaDAOTest
 junit.framework.AssertionFailedError: No tests found in edu.uag.iidis.scec.pruebas.TareaDAOTest
