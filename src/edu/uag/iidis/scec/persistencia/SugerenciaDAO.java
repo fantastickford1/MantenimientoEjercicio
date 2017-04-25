@@ -182,7 +182,7 @@ public class SugerenciaDAO {
 
         try {
 
-            String hql = "select nombre from sugerencias where nombre = :nombre";
+            String hql = "from sugerencias where nombre = :nombre";
 
              if (log.isDebugEnabled()) {
                  log.debug(hql + nombreSugerencia);

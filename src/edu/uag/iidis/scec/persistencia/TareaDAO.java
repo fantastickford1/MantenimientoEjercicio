@@ -247,7 +247,7 @@ public class TareaDAO {
 
         try {
 
-            String hql = "select TareaNombre from Tarea where TareaNombre = :nombreTareas";
+            String hql = "from Tarea where nombre = :nombre";
 
              if (log.isDebugEnabled()) {
                  log.debug(hql + nombreTareas);
